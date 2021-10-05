@@ -6,7 +6,7 @@ import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.Subject;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.Table;
 
 public class GroupCache {
-    private Group group;
+    private Group group = null;
 
     public void addSubject(int dayNum, Subject subject) {
         getTable(dayNum).getSubjects().add(subject);

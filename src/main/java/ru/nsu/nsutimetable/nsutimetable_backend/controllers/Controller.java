@@ -6,6 +6,8 @@ import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.Group;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.RemoveSubjectForm;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.Subject;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "api")
 public class Controller {
@@ -37,5 +39,10 @@ public class Controller {
     @DeleteMapping(path = "table")
     public void deleteSubject(@RequestBody RemoveSubjectForm removeSubjectForm) {
         groupCache.removeSubject(removeSubjectForm);
+    }
+
+    @GetMapping(path = "group_num_list")
+    public List<Integer> getGroupNumList() {
+        return getFacultyList.getGroupNumList();
     }
 }

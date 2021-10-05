@@ -8,6 +8,297 @@
           "num": 4,
           "groups": [
             {
+              "groupNum": 18206,
+              "table": [
+                {
+                  "dayNum": 1,
+                  "subjects": [
+                    {
+                      "lessonNum": 1,
+                      "name": "ОП Java-программ",
+                      "fullName": "Оптимизация производительности Java-программ",
+                      "odd": "Нечетная",
+                      "type": "лек",
+                      "room": "1133",
+                      "teacher": "Адаманский А.В.",
+                      "optional": true
+                    },
+                    {
+                      "lessonNum": 2,
+                      "name": "ОП Java-программ",
+                      "fullName": "Оптимизация производительности Java-программ",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "т3218",
+                      "teacher": "Адаманский А.В.",
+                      "optional": true
+                    },
+                    {
+                      "lessonNum": 3,
+                      "name": "ВРМП",
+                      "fullName": "Введение в разработку мобильных приложений",
+                      "odd": "None",
+                      "type": "лек",
+                      "room": "402 ГК",
+                      "teacher": "Букшев И.Е.",
+                      "optional": true
+                    },
+                    {
+                      "lessonNum": 4,
+                      "name": "КРПО",
+                      "fullName": "Коллективная разработка программного обеспечения",
+                      "odd": "None",
+                      "type": "лек",
+                      "room": "402 ГК",
+                      "teacher": "Мухортов В.В.",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 5,
+                      "name": "ВРМП",
+                      "fullName": "Введение в разработку мобильных приложений",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "т3218",
+                      "teacher": "Букшев И.Е.",
+                      "optional": true
+                    }
+                  ]
+                },
+                {
+                  "dayNum": 2,
+                  "subjects": [
+                    {
+                      "lessonNum": 2,
+                      "name": "ИСИС",
+                      "fullName": "Инжиниринг современных информационных систем",
+                      "odd": "None",
+                      "type": "лек",
+                      "room": "402 ГК",
+                      "teacher": "Зюбин В.Е.",
+                      "optional": true
+                    },
+                    {
+                      "lessonNum": 3,
+                      "name": "ИЭиТП",
+                      "fullName": "Инновационная экономика и технологическое предпринимательство",
+                      "odd": "None",
+                      "type": "лек",
+                      "room": "2128",
+                      "teacher": "Воронов Ю.П.",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 4,
+                      "name": "Защита информ.",
+                      "fullName": "Защита информации",
+                      "odd": "None",
+                      "type": "лек",
+                      "room": "402 ГК",
+                      "teacher": "Пестунова Т.М.",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 6,
+                      "name": "Защита информ.",
+                      "fullName": "Защита информации",
+                      "odd": "None",
+                      "type": "лаб",
+                      "room": "т4218",
+                      "teacher": "Кополовец Ю.В.",
+                      "optional": false
+                    }
+                  ]
+                },
+                {
+                  "dayNum": 3,
+                  "subjects": [
+                    {
+                      "lessonNum": 1,
+                      "name": "Произв. практ. НИР",
+                      "fullName": "Производственная практика, научно-исследовательская работа",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "None",
+                      "teacher": "None",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 2,
+                      "name": "Произв. практ. НИР",
+                      "fullName": "Производственная практика, научно-исследовательская работа",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "None",
+                      "teacher": "None",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 3,
+                      "name": "Произв. практ. НИР",
+                      "fullName": "Производственная практика, научно-исследовательская работа",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "None",
+                      "teacher": "None",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 4,
+                      "name": "Произв. практ. НИР",
+                      "fullName": "Производственная практика, научно-исследовательская работа",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "None",
+                      "teacher": "None",
+                      "optional": false
+                    }
+                  ]
+                },
+                {
+                  "dayNum": 4,
+                  "subjects": [
+                    {
+                      "lessonNum": 1,
+                      "name": "Произв. практ. НИР",
+                      "fullName": "Производственная практика, научно-исследовательская работа",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "None",
+                      "teacher": "None",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 2,
+                      "name": "Произв. практ. НИР",
+                      "fullName": "Производственная практика, научно-исследовательская работа",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "None",
+                      "teacher": "None",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 3,
+                      "name": "Произв. практ. НИР",
+                      "fullName": "Производственная практика, научно-исследовательская работа",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "None",
+                      "teacher": "None",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 4,
+                      "name": "Произв. практ. НИР",
+                      "fullName": "Производственная практика, научно-исследовательская работа",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "None",
+                      "teacher": "None",
+                      "optional": false
+                    }
+                  ]
+                },
+                {
+                  "dayNum": 5,
+                  "subjects": [
+                    {
+                      "lessonNum": 1,
+                      "name": "КИТ",
+                      "fullName": "Криптография для информационных технологий",
+                      "odd": "None",
+                      "type": "лек",
+                      "room": "1130",
+                      "teacher": "Рябко Б.Я.",
+                      "optional": true
+                    },
+                    {
+                      "lessonNum": 2,
+                      "name": "С# и платф.NET",
+                      "fullName": "Введение в С# и платформу.NET",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "т3220",
+                      "teacher": "Савин Н.П.",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 3,
+                      "name": "Информационный поиск",
+                      "fullName": "Информационный поиск",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "3120",
+                      "teacher": "Барахнин В.Б.",
+                      "optional": true
+                    },
+                    {
+                      "lessonNum": 4,
+                      "name": "ИАД",
+                      "fullName": "Интеллектуальный анализ данных",
+                      "odd": "None",
+                      "type": "лек",
+                      "room": "1130",
+                      "teacher": "Борисова И.А.",
+                      "optional": true
+                    },
+                    {
+                      "lessonNum": 5,
+                      "name": "ИСИС",
+                      "fullName": "Инжиниринг современных информационных систем",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "3120",
+                      "teacher": "Розов А.С.",
+                      "optional": true
+                    }
+                  ]
+                },
+                {
+                  "dayNum": 6,
+                  "subjects": [
+                    {
+                      "lessonNum": 2,
+                      "name": "Стандартизация прогр",
+                      "fullName": "Стандартизация программной документации",
+                      "odd": "None",
+                      "type": "лек",
+                      "room": "2128",
+                      "teacher": "Держо М.А.",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 4,
+                      "name": "Стандартизация прогр",
+                      "fullName": "Стандартизация программной документации",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "т3218",
+                      "teacher": "Гаврилов Д.А.",
+                      "optional": false
+                    },
+                    {
+                      "lessonNum": 5,
+                      "name": "КРПО",
+                      "fullName": "Коллективная разработка программного обеспечения",
+                      "odd": "None",
+                      "type": "пр",
+                      "room": "1132",
+                      "teacher": "Мухортов В.В.",
+                      "optional": false
+                    }
+                  ]
+                },
+                {
+                  "dayNum": 7,
+                  "subjects": [
+                    {}
+                  ]
+                }
+              ]
+            },
+            {
               "groupNum": 18208,
               "table": [
                 {

@@ -5,27 +5,27 @@ import java.util.List;
 import javax.annotation.Generated;
 
 @Generated("jsonschema2pojo")
-public class Faculty {
+public class Degree {
 
     private String name;
-    private List<Degree> degrees = null;
+    private List<Course> courses = null;
 
     /**
      * No args constructor for use in serialization
      * 
      */
-    public Faculty() {
+    public Degree() {
     }
 
     /**
      * 
+     * @param courses
      * @param name
-     * @param degrees
      */
-    public Faculty(String name, List<Degree> degrees) {
+    public Degree(String name, List<Course> courses) {
         super();
         this.name = name;
-        this.degrees = degrees;
+        this.courses = courses;
     }
 
     public String getName() {
@@ -36,25 +36,25 @@ public class Faculty {
         this.name = name;
     }
 
-    public List<Degree> getDegrees() {
-        return degrees;
+    public List<Course> getCourses() {
+        return courses;
     }
 
-    public void setDegrees(List<Degree> degrees) {
-        this.degrees = degrees;
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(Faculty.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+        sb.append(Degree.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
         sb.append("name");
         sb.append('=');
         sb.append(((this.name == null)?"<null>":this.name));
         sb.append(',');
-        sb.append("degrees");
+        sb.append("courses");
         sb.append('=');
-        sb.append(((this.degrees == null)?"<null>":this.degrees));
+        sb.append(((this.courses == null)?"<null>":this.courses));
         sb.append(',');
         if (sb.charAt((sb.length()- 1)) == ',') {
             sb.setCharAt((sb.length()- 1), ']');
@@ -68,7 +68,7 @@ public class Faculty {
     public int hashCode() {
         int result = 1;
         result = ((result* 31)+((this.name == null)? 0 :this.name.hashCode()));
-        result = ((result* 31)+((this.degrees == null)? 0 :this.degrees.hashCode()));
+        result = ((result* 31)+((this.courses == null)? 0 :this.courses.hashCode()));
         return result;
     }
 
@@ -77,11 +77,11 @@ public class Faculty {
         if (other == this) {
             return true;
         }
-        if ((other instanceof Faculty) == false) {
+        if ((other instanceof Degree) == false) {
             return false;
         }
-        Faculty rhs = ((Faculty) other);
-        return (((this.name == rhs.name)||((this.name!= null)&&this.name.equals(rhs.name)))&&((this.degrees == rhs.degrees)||((this.degrees!= null)&&this.degrees.equals(rhs.degrees))));
+        Degree rhs = ((Degree) other);
+        return (((this.name == rhs.name)||((this.name!= null)&&this.name.equals(rhs.name)))&&((this.courses == rhs.courses)||((this.courses!= null)&&this.courses.equals(rhs.courses))));
     }
 
 }

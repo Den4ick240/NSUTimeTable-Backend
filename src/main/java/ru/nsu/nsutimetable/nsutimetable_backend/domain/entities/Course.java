@@ -1,9 +1,7 @@
 
 package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import javax.annotation.Generated;
 
 @Generated("jsonschema2pojo")
@@ -11,7 +9,6 @@ public class Course {
 
     private Integer num;
     private List<Group> groups = null;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * No args constructor for use in serialization
@@ -47,14 +44,6 @@ public class Course {
         this.groups = groups;
     }
 
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -66,10 +55,6 @@ public class Course {
         sb.append("groups");
         sb.append('=');
         sb.append(((this.groups == null)?"<null>":this.groups));
-        sb.append(',');
-        sb.append("additionalProperties");
-        sb.append('=');
-        sb.append(((this.additionalProperties == null)?"<null>":this.additionalProperties));
         sb.append(',');
         if (sb.charAt((sb.length()- 1)) == ',') {
             sb.setCharAt((sb.length()- 1), ']');
@@ -83,7 +68,6 @@ public class Course {
     public int hashCode() {
         int result = 1;
         result = ((result* 31)+((this.groups == null)? 0 :this.groups.hashCode()));
-        result = ((result* 31)+((this.additionalProperties == null)? 0 :this.additionalProperties.hashCode()));
         result = ((result* 31)+((this.num == null)? 0 :this.num.hashCode()));
         return result;
     }
@@ -97,7 +81,7 @@ public class Course {
             return false;
         }
         Course rhs = ((Course) other);
-        return ((((this.groups == rhs.groups)||((this.groups!= null)&&this.groups.equals(rhs.groups)))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))))&&((this.num == rhs.num)||((this.num!= null)&&this.num.equals(rhs.num))));
+        return (((this.groups == rhs.groups)||((this.groups!= null)&&this.groups.equals(rhs.groups)))&&((this.num == rhs.num)||((this.num!= null)&&this.num.equals(rhs.num))));
     }
 
 }

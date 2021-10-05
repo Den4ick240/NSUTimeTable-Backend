@@ -25,6 +25,11 @@ public class Controller {
         return groupCache.getGroup();
     }
 
+    @GetMapping(path = "table/{groupName}")
+    public Group getGroup(@PathVariable Integer groupName) {
+        return getFacultyList.findGroup(groupName);
+    }
+
     @PostMapping(path = "table/{groupName}")
     public Group createTableFromGroup(@PathVariable Integer groupName) {
         groupCache.setGroup(getFacultyList.findGroup(groupName));

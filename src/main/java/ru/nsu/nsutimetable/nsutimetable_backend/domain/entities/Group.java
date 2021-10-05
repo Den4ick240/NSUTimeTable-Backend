@@ -1,9 +1,7 @@
 
 package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import javax.annotation.Generated;
 
 @Generated("jsonschema2pojo")
@@ -11,7 +9,6 @@ public class Group {
 
     private Integer groupNum;
     private List<Table> table = null;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * No args constructor for use in serialization
@@ -47,14 +44,6 @@ public class Group {
         this.table = table;
     }
 
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -66,10 +55,6 @@ public class Group {
         sb.append("table");
         sb.append('=');
         sb.append(((this.table == null)?"<null>":this.table));
-        sb.append(',');
-        sb.append("additionalProperties");
-        sb.append('=');
-        sb.append(((this.additionalProperties == null)?"<null>":this.additionalProperties));
         sb.append(',');
         if (sb.charAt((sb.length()- 1)) == ',') {
             sb.setCharAt((sb.length()- 1), ']');
@@ -83,7 +68,6 @@ public class Group {
     public int hashCode() {
         int result = 1;
         result = ((result* 31)+((this.groupNum == null)? 0 :this.groupNum.hashCode()));
-        result = ((result* 31)+((this.additionalProperties == null)? 0 :this.additionalProperties.hashCode()));
         result = ((result* 31)+((this.table == null)? 0 :this.table.hashCode()));
         return result;
     }
@@ -97,7 +81,7 @@ public class Group {
             return false;
         }
         Group rhs = ((Group) other);
-        return ((((this.groupNum == rhs.groupNum)||((this.groupNum!= null)&&this.groupNum.equals(rhs.groupNum)))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))))&&((this.table == rhs.table)||((this.table!= null)&&this.table.equals(rhs.table))));
+        return (((this.groupNum == rhs.groupNum)||((this.groupNum!= null)&&this.groupNum.equals(rhs.groupNum)))&&((this.table == rhs.table)||((this.table!= null)&&this.table.equals(rhs.table))));
     }
 
 }

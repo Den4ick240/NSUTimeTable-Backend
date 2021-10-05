@@ -1,8 +1,6 @@
 
 package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.annotation.Generated;
 
 @Generated("jsonschema2pojo")
@@ -11,12 +9,11 @@ public class Subject {
     private Integer lessonNum;
     private String name;
     private String fullName;
-    private String odd;
+    private Object odd;
     private String type;
     private String room;
     private String teacher;
     private Boolean optional;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * No args constructor for use in serialization
@@ -36,7 +33,7 @@ public class Subject {
      * @param odd
      * @param room
      */
-    public Subject(Integer lessonNum, String name, String fullName, String odd, String type, String room, String teacher, Boolean optional) {
+    public Subject(Integer lessonNum, String name, String fullName, Object odd, String type, String room, String teacher, Boolean optional) {
         super();
         this.lessonNum = lessonNum;
         this.name = name;
@@ -72,11 +69,11 @@ public class Subject {
         this.fullName = fullName;
     }
 
-    public String getOdd() {
+    public Object getOdd() {
         return odd;
     }
 
-    public void setOdd(String odd) {
+    public void setOdd(Object odd) {
         this.odd = odd;
     }
 
@@ -110,14 +107,6 @@ public class Subject {
 
     public void setOptional(Boolean optional) {
         this.optional = optional;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
     @Override
@@ -156,10 +145,6 @@ public class Subject {
         sb.append('=');
         sb.append(((this.optional == null)?"<null>":this.optional));
         sb.append(',');
-        sb.append("additionalProperties");
-        sb.append('=');
-        sb.append(((this.additionalProperties == null)?"<null>":this.additionalProperties));
-        sb.append(',');
         if (sb.charAt((sb.length()- 1)) == ',') {
             sb.setCharAt((sb.length()- 1), ']');
         } else {
@@ -176,7 +161,6 @@ public class Subject {
         result = ((result* 31)+((this.name == null)? 0 :this.name.hashCode()));
         result = ((result* 31)+((this.fullName == null)? 0 :this.fullName.hashCode()));
         result = ((result* 31)+((this.optional == null)? 0 :this.optional.hashCode()));
-        result = ((result* 31)+((this.additionalProperties == null)? 0 :this.additionalProperties.hashCode()));
         result = ((result* 31)+((this.type == null)? 0 :this.type.hashCode()));
         result = ((result* 31)+((this.odd == null)? 0 :this.odd.hashCode()));
         result = ((result* 31)+((this.room == null)? 0 :this.room.hashCode()));
@@ -192,7 +176,7 @@ public class Subject {
             return false;
         }
         Subject rhs = ((Subject) other);
-        return ((((((((((this.lessonNum == rhs.lessonNum)||((this.lessonNum!= null)&&this.lessonNum.equals(rhs.lessonNum)))&&((this.teacher == rhs.teacher)||((this.teacher!= null)&&this.teacher.equals(rhs.teacher))))&&((this.name == rhs.name)||((this.name!= null)&&this.name.equals(rhs.name))))&&((this.fullName == rhs.fullName)||((this.fullName!= null)&&this.fullName.equals(rhs.fullName))))&&((this.optional == rhs.optional)||((this.optional!= null)&&this.optional.equals(rhs.optional))))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))))&&((this.type == rhs.type)||((this.type!= null)&&this.type.equals(rhs.type))))&&((this.odd == rhs.odd)||((this.odd!= null)&&this.odd.equals(rhs.odd))))&&((this.room == rhs.room)||((this.room!= null)&&this.room.equals(rhs.room))));
+        return (((((((((this.lessonNum == rhs.lessonNum)||((this.lessonNum!= null)&&this.lessonNum.equals(rhs.lessonNum)))&&((this.teacher == rhs.teacher)||((this.teacher!= null)&&this.teacher.equals(rhs.teacher))))&&((this.name == rhs.name)||((this.name!= null)&&this.name.equals(rhs.name))))&&((this.fullName == rhs.fullName)||((this.fullName!= null)&&this.fullName.equals(rhs.fullName))))&&((this.optional == rhs.optional)||((this.optional!= null)&&this.optional.equals(rhs.optional))))&&((this.type == rhs.type)||((this.type!= null)&&this.type.equals(rhs.type))))&&((this.odd == rhs.odd)||((this.odd!= null)&&this.odd.equals(rhs.odd))))&&((this.room == rhs.room)||((this.room!= null)&&this.room.equals(rhs.room))));
     }
 
 }

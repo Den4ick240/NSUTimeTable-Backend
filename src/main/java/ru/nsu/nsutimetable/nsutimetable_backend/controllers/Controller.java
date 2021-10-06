@@ -2,14 +2,13 @@ package ru.nsu.nsutimetable.nsutimetable_backend.controllers;
 
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.nsutimetable.nsutimetable_backend.GetFacultyList;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.Group;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.RemoveSubjectForm;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.Subject;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping(path = "api")
+@CrossOrigin(origins = "http://localhost:3000")
 public class Controller {
     private final GetFacultyList getFacultyList;
 
@@ -30,15 +29,15 @@ public class Controller {
         return getFacultyList.findGroup(groupName);
     }
 
-    @PostMapping(path = "table/{groupName}")
-    public Group createTableFromGroup(@PathVariable Integer groupName) {
-        groupCache.setGroup(getFacultyList.findGroup(groupName));
+    @PostMapping(path = "table")
+    public Group createTableFromGroup(@RequestBody SetGroupForm setGroupForm) {
+        groupCache.setGroup(getFacultyList.findGroup(setGroupForm.getGroupNum()));
         return groupCache.getGroup();
     }
 
-    @PostMapping(path = "table/{dayNum}")
-    public void addSubject(@PathVariable Integer dayNum, @RequestBody Subject subject){
-        groupCache.addSubject(dayNum, subject);
+    @PostMapping(path = "table/")
+    public void addSubject(@RequestBody AddSubjectFrom addSubjectFrom){
+        groupCache.addSubject(addSubjectFrom.getDayNum(), addSubjectFrom.getSubject());
     }
 
     @DeleteMapping(path = "table")

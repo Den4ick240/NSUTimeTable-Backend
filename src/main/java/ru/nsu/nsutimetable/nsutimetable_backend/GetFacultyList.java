@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
@@ -36,8 +37,17 @@ public class GetFacultyList {
     }
 
     public Group findGroup(Integer groupNum) {
-        return foreachGroupListWithReturn(groups -> groups.stream().filter(_group -> _group.getGroupNum().equals(groupNum))
-                .findFirst()).orElseThrow(() -> new RuntimeException("Requested group does not exist"));
+
+        return Optional
+                .of(
+                        foreachGroupListWithReturn(
+                                groups -> groups
+                                        .stream()
+                                        .filter(_group -> _group.getGroupNum().equals(groupNum))
+                                        .findFirst()
+                                        .orElse(null))
+                )
+                .orElseThrow(() -> new RuntimeException("Requested group does not exist"));
     }
 
     public List<Integer> getGroupNumList() {

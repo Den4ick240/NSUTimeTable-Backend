@@ -36,7 +36,7 @@ public class Controller {
         return groupCache.getGroup();
     }
 
-    @PostMapping(path = "table/")
+    @PutMapping(path = "table")
     public void addSubject(@RequestBody AddSubjectFrom addSubjectFrom){
         groupCache.addSubject(addSubjectFrom.getDayNum(), addSubjectFrom.getSubject());
     }

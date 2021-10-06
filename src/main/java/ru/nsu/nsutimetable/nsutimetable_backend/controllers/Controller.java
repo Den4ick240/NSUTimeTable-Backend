@@ -1,5 +1,6 @@
 package ru.nsu.nsutimetable.nsutimetable_backend.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.nsutimetable.nsutimetable_backend.GetFacultyList;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.*;
@@ -12,11 +13,11 @@ import java.util.List;
 public class Controller {
     private final GetFacultyList getFacultyList;
 
-    private final GroupCache groupCache;
+    @Autowired
+    private GroupCache groupCache;
 
-    public Controller(GetFacultyList getFacultyList, GroupCache groupCache) {
+    public Controller(GetFacultyList getFacultyList) {
         this.getFacultyList = getFacultyList;
-        this.groupCache = groupCache;
     }
 
     @GetMapping(path = "table")

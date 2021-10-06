@@ -9,5 +9,4 @@ public class NsuTimeTableBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NsuTimeTableBackendApplication.class, args);
 	}
-
 }

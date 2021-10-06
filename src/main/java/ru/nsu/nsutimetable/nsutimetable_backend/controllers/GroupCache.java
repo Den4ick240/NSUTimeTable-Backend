@@ -17,7 +17,12 @@ public class GroupCache {
                 subject ->
                         subject.getName().equals(removeSubjectForm.getName()) &&
                                 subject.getLessonNum().equals(removeSubjectForm.getLessonNum()) &&
-                                subject.getOdd().equals(removeSubjectForm.getOdd())
+                                (
+                                        subject.getOdd() == removeSubjectForm.getOdd() ||
+                                                (
+                                                        subject.getOdd() != null && removeSubjectForm.getOdd() != null && subject.getOdd().equals(removeSubjectForm.getOdd())
+                                                )
+                                )
         );
     }
 

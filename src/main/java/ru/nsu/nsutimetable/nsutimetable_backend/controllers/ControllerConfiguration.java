@@ -2,6 +2,7 @@ package ru.nsu.nsutimetable.nsutimetable_backend.controllers;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.context.annotation.SessionScope;
 import ru.nsu.nsutimetable.nsutimetable_backend.GetFacultyList;
 
@@ -13,7 +14,7 @@ public class ControllerConfiguration {
     }
 
     @Bean
-    @SessionScope
+    @Scope("singleton")
     public GroupCache groupCache() {
         return new GroupCache();
     }

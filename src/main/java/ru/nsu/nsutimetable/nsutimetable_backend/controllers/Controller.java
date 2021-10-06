@@ -37,8 +37,8 @@ public class Controller {
     }
 
     @PostMapping(path = "table/")
-    public void addSubject(@RequestBody AddSubjectFrom addSubjectFrom){
-        groupCache.addSubject(addSubjectFrom.getDayNum(), addSubjectFrom.getSubject());
+    public void addSubject(@RequestBody AddSubjectFrom subject){
+        groupCache.addSubject(subject.getDayNum(), subject.getSubject());
     }
 
     @DeleteMapping(path = "table")

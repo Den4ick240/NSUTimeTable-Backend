@@ -14,7 +14,7 @@ public class ControllerConfiguration {
     }
 
     @Bean
-    @Scope("singleton")
+    @SessionScope
     public GroupCache groupCache() {
         return new GroupCache();
     }

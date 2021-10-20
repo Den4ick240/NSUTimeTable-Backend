@@ -1,11 +1,11 @@
 
-package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities;
+package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.spec;
 
 import java.util.List;
 import javax.annotation.Generated;
 
 @Generated("jsonschema2pojo")
-public class FacultyList {
+public class SpecCourses {
 
     private List<Faculty> faculties = null;
 
@@ -13,14 +13,14 @@ public class FacultyList {
      * No args constructor for use in serialization
      * 
      */
-    public FacultyList() {
+    public SpecCourses() {
     }
 
     /**
      * 
      * @param faculties
      */
-    public FacultyList(List<Faculty> faculties) {
+    public SpecCourses(List<Faculty> faculties) {
         super();
         this.faculties = faculties;
     }
@@ -36,7 +36,7 @@ public class FacultyList {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(FacultyList.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+        sb.append(SpecCourses.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
         sb.append("faculties");
         sb.append('=');
         sb.append(((this.faculties == null)?"<null>":this.faculties));
@@ -61,10 +61,10 @@ public class FacultyList {
         if (other == this) {
             return true;
         }
-        if ((other instanceof FacultyList) == false) {
+        if ((other instanceof SpecCourses) == false) {
             return false;
         }
-        FacultyList rhs = ((FacultyList) other);
+        SpecCourses rhs = ((SpecCourses) other);
         return ((this.faculties == rhs.faculties)||((this.faculties!= null)&&this.faculties.equals(rhs.faculties)));
     }
 

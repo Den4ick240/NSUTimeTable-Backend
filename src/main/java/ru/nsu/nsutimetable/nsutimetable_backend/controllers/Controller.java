@@ -2,8 +2,12 @@ package ru.nsu.nsutimetable.nsutimetable_backend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.nsu.nsutimetable.nsutimetable_backend.GetFacultyList;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.*;
+import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupService;
+import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupServiceFromFacultyList;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.AddSubjectFrom;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.RemoveSubjectForm;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.SetGroupForm;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
 
 import java.util.List;
 
@@ -11,13 +15,12 @@ import java.util.List;
 @RequestMapping(path = "api")
 @CrossOrigin(origins = "http://localhost:3000")
 public class Controller {
-    private final GetFacultyList getFacultyList;
+    private final GroupService getFacultyList;
+    private final GroupCache groupCache;
 
-    @Autowired
-    private GroupCache groupCache;
-
-    public Controller(GetFacultyList getFacultyList) {
+    public Controller(GroupServiceFromFacultyList getFacultyList, GroupCache groupCache) {
         this.getFacultyList = getFacultyList;
+        this.groupCache = groupCache;
     }
 
     @GetMapping(path = "table")
@@ -26,13 +29,13 @@ public class Controller {
     }
 
     @GetMapping(path = "table/{groupName}")
-    public Group getGroup(@PathVariable Integer groupName) {
-        return getFacultyList.findGroup(groupName);
+    public Group getGroup(@PathVariable String groupName) {
+        return getFacultyList.findGroupByGroupNum(groupName);
     }
 
     @PostMapping(path = "table")
     public Group createTableFromGroup(@RequestBody SetGroupForm setGroupForm) {
-        groupCache.setGroup(getFacultyList.findGroup(setGroupForm.getGroupNum()));
+        groupCache.setGroup(getFacultyList.findGroupByGroupNum(setGroupForm.getGroupNum()));
         return groupCache.getGroup();
     }
 
@@ -47,7 +50,7 @@ public class Controller {
     }
 
     @GetMapping(path = "group_num_list")
-    public List<Integer> getGroupNumList() {
+    public List<String> getGroupNumList() {
         return getFacultyList.getGroupNumList();
     }
 }

@@ -1,5 +1,5 @@
 
-package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities;
+package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules;
 
 import java.util.List;
 import javax.annotation.Generated;

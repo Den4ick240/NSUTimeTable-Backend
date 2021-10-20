@@ -1,4 +1,6 @@
-package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities;
+package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms;
+
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Subject;
 
 public class AddSubjectFrom {
     private int dayNum;

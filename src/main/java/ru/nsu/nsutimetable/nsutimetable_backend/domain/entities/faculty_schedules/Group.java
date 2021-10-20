@@ -1,5 +1,5 @@
 
-package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities;
+package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules;
 
 import java.util.List;
 import javax.annotation.Generated;
@@ -7,7 +7,7 @@ import javax.annotation.Generated;
 @Generated("jsonschema2pojo")
 public class Group {
 
-    private Integer groupNum;
+    private String groupNum;
     private List<Table> table = null;
 
     /**
@@ -22,17 +22,17 @@ public class Group {
      * @param groupNum
      * @param table
      */
-    public Group(Integer groupNum, List<Table> table) {
+    public Group(String groupNum, List<Table> table) {
         super();
         this.groupNum = groupNum;
         this.table = table;
     }
 
-    public Integer getGroupNum() {
+    public String getGroupNum() {
         return groupNum;
     }
 
-    public void setGroupNum(Integer groupNum) {
+    public void setGroupNum(String groupNum) {
         this.groupNum = groupNum;
     }
 

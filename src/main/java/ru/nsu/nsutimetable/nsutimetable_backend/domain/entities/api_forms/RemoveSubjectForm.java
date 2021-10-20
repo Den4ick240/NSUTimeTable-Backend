@@ -1,4 +1,4 @@
-package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities;
+package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms;
 
 import java.util.Objects;
 

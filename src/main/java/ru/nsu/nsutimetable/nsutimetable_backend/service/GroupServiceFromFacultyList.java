@@ -1,8 +1,9 @@
-package ru.nsu.nsutimetable.nsutimetable_backend;
+package ru.nsu.nsutimetable.nsutimetable_backend.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.FacultyList;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.Group;
+import org.springframework.stereotype.Service;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.FacultySchedules;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,34 +13,18 @@ import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-public class GetFacultyList {
-    final private FacultyList facultyList;
-    private static final String FILE_NAME = "/FIT_timetable.json";
-//    private static final String FILE_NAME = "/table.json";
+@Service
+public class GroupServiceFromFacultyList implements GroupService {
+    final private FacultySchedules facultyList;
 
-
-    public GetFacultyList() {
-        FacultyList facultyList1;
-
-        try {
-            ObjectMapper mapper = new ObjectMapper();
-            InputStream is = GetFacultyList.class.getResourceAsStream(FILE_NAME);
-            facultyList1 = mapper.readValue(is, FacultyList.class);
-        } catch (IOException e) {
-            e.printStackTrace();
-            facultyList1 = null;
-        }
-        facultyList = facultyList1;
+    public GroupServiceFromFacultyList(FacultySchedulesService facultySchedulesService) {
+        this.facultyList = facultySchedulesService.getFacultySchedules();
     }
 
-    public FacultyList getFacultyList() {
-        return facultyList;
-    }
-
-    public Group findGroup(Integer groupNum) {
+    public Group findGroupByGroupNum(String groupNum) {
 
         return Optional
-                .of(
+                .ofNullable(
                         foreachGroupListWithReturn(
                                 groups -> groups
                                         .stream()
@@ -50,25 +35,25 @@ public class GetFacultyList {
                 .orElseThrow(() -> new RuntimeException("Requested group does not exist"));
     }
 
-    public List<Integer> getGroupNumList() {
-        var groupNums = new ArrayList<Integer>();
+    public List<String> getGroupNumList() {
+        var groupNums = new ArrayList<String>();
         foreachGroupList(groups ->
                 groupNums.addAll(groups.stream().map(Group::getGroupNum).toList())
         );
         return groupNums;
     }
 
-    public <T> void foreachGroupList(Consumer<List<Group>> consumer) {
+    private <T> void foreachGroupList(Consumer<List<Group>> consumer) {
         foreachGroupListWithReturn(groups -> {
             consumer.accept(groups);
             return null;
         });
     }
 
-    public <T> T foreachGroupListWithReturn(Function<List<Group>, T> function) {
+    private <T> T foreachGroupListWithReturn(Function<List<Group>, T> function) {
 
         for (var faculty :
-                getFacultyList().getFaculties())
+                facultyList.getFaculties())
             for (var degrees :
                     faculty.getDegrees())
                 for (var course :

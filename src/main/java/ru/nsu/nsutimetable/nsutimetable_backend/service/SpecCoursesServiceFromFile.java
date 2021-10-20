@@ -4,33 +4,34 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.FacultySchedules;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.spec.SpecCourses;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 @Service
 @Scope("singleton")
-public class FacultyScheduleServiceFromFile implements FacultySchedulesService {
-    private static final String FILE_NAME = "/FIT_timetable.json";
+public class SpecCoursesServiceFromFile implements SpecCoursesService {
 
-    private final FacultySchedules facultySchedules;
+    private static final String FILE_NAME = "/spec.json";
 
-    public FacultyScheduleServiceFromFile() {
-        FacultySchedules facultyList1;
+    private final SpecCourses specCourses;
 
+    public SpecCoursesServiceFromFile() {
+        SpecCourses specCourses1;
         try {
             ObjectMapper mapper = new ObjectMapper();
             InputStream is = GroupServiceFromFacultyList.class.getResourceAsStream(FILE_NAME);
-            facultyList1 = mapper.readValue(is, FacultySchedules.class);
+            specCourses1 = mapper.readValue(is, SpecCourses.class);
         } catch (IOException e) {
             e.printStackTrace();
-            facultyList1 = null;
+            specCourses1 = null;
         }
-        facultySchedules = facultyList1;
+        specCourses = specCourses1;
     }
 
     @Override
-    public FacultySchedules getFacultySchedules() {
-        return facultySchedules;
+    public SpecCourses getSpecCourses() {
+        return specCourses;
     }
 }

@@ -1,13 +1,18 @@
 package ru.nsu.nsutimetable.nsutimetable_backend.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.SneakyThrows;
 import org.springframework.web.bind.annotation.*;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.ScheduleComposer;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserInfo;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserTable;
+import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupService;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupServiceFromFacultyList;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.AddSubjectFrom;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.RemoveSubjectForm;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.SetGroupForm;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
+import ru.nsu.nsutimetable.nsutimetable_backend.service.UserTableService;
 
 import java.util.List;
 
@@ -16,16 +21,20 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:3000")
 public class Controller {
     private final GroupService getFacultyList;
-    private final GroupCache groupCache;
+    private final UserTableService userTableService;
+    private final ScheduleComposer scheduleComposer;
 
-    public Controller(GroupServiceFromFacultyList getFacultyList, GroupCache groupCache) {
+    public Controller(GroupServiceFromFacultyList getFacultyList,
+                      UserTableService userTableService,
+                      ScheduleComposer scheduleComposer) {
         this.getFacultyList = getFacultyList;
-        this.groupCache = groupCache;
+        this.userTableService = userTableService;
+        this.scheduleComposer = scheduleComposer;
     }
 
     @GetMapping(path = "table")
-    public Group getGroup() {
-        return groupCache.getGroup();
+    public UserTable getGroup() {
+        return userTableService.getUserTable();
     }
 
     @GetMapping(path = "table/{groupName}")
@@ -34,19 +43,27 @@ public class Controller {
     }
 
     @PostMapping(path = "table")
-    public Group createTableFromGroup(@RequestBody SetGroupForm setGroupForm) {
-        groupCache.setGroup(getFacultyList.findGroupByGroupNum(setGroupForm.getGroupNum()));
-        return groupCache.getGroup();
+    public UserTable createTableFromGroup(@RequestBody UserInfo userInfo) {
+        userTableService.setUserTable(scheduleComposer.composeUserTable(userInfo));
+        return userTableService.getUserTable();
     }
 
     @PutMapping(path = "table")
     public void addSubject(@RequestBody AddSubjectFrom addSubjectFrom){
-        groupCache.addSubject(addSubjectFrom.getDayNum(), addSubjectFrom.getSubject());
+        try {
+            userTableService.addSubject(addSubjectFrom);
+        } catch (TableException e) {
+            e.printStackTrace();
+        }
     }
 
     @DeleteMapping(path = "table")
     public void deleteSubject(@RequestBody RemoveSubjectForm removeSubjectForm) {
-        groupCache.removeSubject(removeSubjectForm);
+        try {
+            userTableService.removeSubject(removeSubjectForm);
+        } catch (TableException e) {
+            e.printStackTrace();
+        }
     }
 
     @GetMapping(path = "group_num_list")

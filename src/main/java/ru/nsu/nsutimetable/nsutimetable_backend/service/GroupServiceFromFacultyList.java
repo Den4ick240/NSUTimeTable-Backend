@@ -2,8 +2,10 @@ package ru.nsu.nsutimetable.nsutimetable_backend.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.GroupInfo;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.FacultySchedules;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
+import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,6 +23,7 @@ public class GroupServiceFromFacultyList implements GroupService {
         this.facultyList = facultySchedulesService.getFacultySchedules();
     }
 
+    @Override
     public Group findGroupByGroupNum(String groupNum) {
 
         return Optional
@@ -35,12 +38,23 @@ public class GroupServiceFromFacultyList implements GroupService {
                 .orElseThrow(() -> new RuntimeException("Requested group does not exist"));
     }
 
+    @Override
     public List<String> getGroupNumList() {
         var groupNums = new ArrayList<String>();
         foreachGroupList(groups ->
                 groupNums.addAll(groups.stream().map(Group::getGroupNum).toList())
         );
         return groupNums;
+    }
+
+    @Override
+    public GroupInfo getGroupInfoByGroupNum(String groupNum) throws TableException {
+        for (var faculty : facultyList.getFaculties())
+            for (var degree : faculty.getDegrees())
+                for (var course : degree.getCourses())
+                    if (course.getGroups().stream().anyMatch(group -> group.getGroupNum().equals(groupNum)))
+                        return new GroupInfo(groupNum, course.getNum(), degree.getName(), faculty.getName());
+        throw new TableException("requested group does not exist");
     }
 
     private <T> void foreachGroupList(Consumer<List<Group>> consumer) {

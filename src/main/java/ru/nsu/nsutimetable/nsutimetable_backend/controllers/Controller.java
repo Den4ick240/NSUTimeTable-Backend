@@ -44,7 +44,11 @@ public class Controller {
 
     @PostMapping(path = "table")
     public UserTable createTableFromGroup(@RequestBody UserInfo userInfo) {
-        userTableService.setUserTable(scheduleComposer.composeUserTable(userInfo));
+        try {
+            userTableService.setUserTable(scheduleComposer.composeUserTable(userInfo));
+        } catch (TableException e) {
+            e.printStackTrace();
+        }
         return userTableService.getUserTable();
     }
 

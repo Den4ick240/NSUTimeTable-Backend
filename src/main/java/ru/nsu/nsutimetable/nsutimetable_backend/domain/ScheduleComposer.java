@@ -6,7 +6,6 @@ import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserTable;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Table;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupService;
-import ru.nsu.nsutimetable.nsutimetable_backend.service.SpecCoursesService;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.SpecSubjectService;
 
 import java.util.List;
@@ -54,12 +53,10 @@ public class ScheduleComposer {
                                                                     return false;
                                                                 }
                                                         )
-
                         )
         );
 
-        return new UserTable(
-                table
-        );
+        return new UserTable(table);
+
     }
 }

@@ -30,23 +30,32 @@ public class ScheduleComposer {
         );
 
         table.forEach(day ->
-                        day.getSubjects()
-                                .removeIf(
-                                        subject -> specSubjects
-                                                .stream()
-                                                .filter(specSubject ->
-                                                        specSubject.getFullName().equals(subject.getFullName())
-                                                )
-                                                .findFirst()
-                                                .map(specSubjectHasStudent -> specSubjectHasStudent
-                                                        .getStudents()
+                day.getSubjects()
+                        .removeIf(
+                                subject ->
+                                        !subject.getOptional() ||
+                                                specSubjects
                                                         .stream()
-                                                        .noneMatch(student ->
-                                                                student.getName().equals(userInfo.getName())
+                                                        .filter(specSubject ->
+                                                                specSubject.getFullName().equals(subject.getFullName())
                                                         )
-                                                )
-                                                .orElse(false)
-                                )
+                                                        .findFirst()
+                                                        .map(specSubjectHasStudent -> specSubjectHasStudent
+                                                                .getStudents()
+                                                                .stream()
+                                                                .noneMatch(student ->
+                                                                        student.getName().equals(userInfo.getName())
+                                                                )
+                                                        )
+                                                        .orElseGet(
+                                                                () -> {
+                                                                    System.out.println(
+                                                                            "subject is optional but it was not found in specCourses list");
+                                                                    return false;
+                                                                }
+                                                        )
+
+                        )
         );
 
         return new UserTable(

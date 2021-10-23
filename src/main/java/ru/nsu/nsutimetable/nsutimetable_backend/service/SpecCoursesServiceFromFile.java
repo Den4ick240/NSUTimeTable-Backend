@@ -3,7 +3,6 @@ package ru.nsu.nsutimetable.nsutimetable_backend.service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.FacultySchedules;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.spec.SpecCourses;
 
 import java.io.IOException;

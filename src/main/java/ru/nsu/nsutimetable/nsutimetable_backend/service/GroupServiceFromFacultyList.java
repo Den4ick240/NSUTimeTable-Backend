@@ -1,14 +1,11 @@
 package ru.nsu.nsutimetable.nsutimetable_backend.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.GroupInfo;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.FacultySchedules;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.FacultyTables;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -17,10 +14,10 @@ import java.util.function.Function;
 
 @Service
 public class GroupServiceFromFacultyList implements GroupService {
-    final private FacultySchedules facultyList;
+    final private FacultyTables facultyList;
 
-    public GroupServiceFromFacultyList(FacultySchedulesService facultySchedulesService) {
-        this.facultyList = facultySchedulesService.getFacultySchedules();
+    public GroupServiceFromFacultyList(FacultyTablesService facultySchedulesService) {
+        this.facultyList = facultySchedulesService.getFacultyTables();
     }
 
     @Override

@@ -2,16 +2,15 @@ package ru.nsu.nsutimetable.nsutimetable_backend.service;
 
 import org.springframework.stereotype.Service;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.GroupInfo;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserInfo;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.spec.Subject;
 
 import java.util.List;
 
 @Service
-public class SpecSubjectServiceImpl implements SpecSubjectService {
+public class SpecSubjectServiceFromSpecCoursesList implements SpecSubjectService {
     private final SpecCoursesService specCoursesService;
 
-    public SpecSubjectServiceImpl(SpecCoursesService specCoursesService) {
+    public SpecSubjectServiceFromSpecCoursesList(SpecCoursesService specCoursesService) {
         this.specCoursesService = specCoursesService;
     }
 

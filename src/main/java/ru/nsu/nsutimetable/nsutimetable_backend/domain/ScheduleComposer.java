@@ -32,7 +32,7 @@ public class ScheduleComposer {
                 day.getSubjects()
                         .removeIf(
                                 subject ->
-                                        !subject.getOptional() ||
+                                        !subject.getOptional() &&
                                                 specSubjects
                                                         .stream()
                                                         .filter(specSubject ->
@@ -57,6 +57,5 @@ public class ScheduleComposer {
         );
 
         return new UserTable(table);
-
     }
 }

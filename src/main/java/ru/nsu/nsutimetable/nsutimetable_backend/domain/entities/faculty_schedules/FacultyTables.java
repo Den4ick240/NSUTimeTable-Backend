@@ -10,6 +10,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FacultySchedules {
+public class FacultyTables {
     private List<Faculty> faculties = null;
 }

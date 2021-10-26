@@ -8,7 +8,9 @@ import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupService;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.SpecSubjectService;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ScheduleComposer {
@@ -22,17 +24,18 @@ public class ScheduleComposer {
     }
 
     public UserTable composeUserTable(UserInfo userInfo) throws TableException {
-        List<Table> table = groupService.findGroupByGroupNum(userInfo.getGroupNum()).getTable();
+        List<Table> table = new ArrayList<>(groupService.findGroupByGroupNum(userInfo.getGroupNum()).getTable());
 
         var specSubjects = specSubjectService.findAllForGroupInfo(
                 groupService.getGroupInfoByGroupNum(userInfo.getGroupNum())
         );
 
-        table.forEach(day ->
-                day.getSubjects()
-                        .removeIf(
+        table = table.stream().map(day ->
+                new Table(day.getDayNum(), day.getSubjects()
+                        .stream().filter(
                                 subject ->
-                                        subject.getOptional() &&
+                                        !subject.getOptional()
+                                                ||
                                                 specSubjects
                                                         .stream()
                                                         .filter(specSubject ->
@@ -42,7 +45,7 @@ public class ScheduleComposer {
                                                         .map(specSubjectHasStudent -> specSubjectHasStudent
                                                                 .getStudents()
                                                                 .stream()
-                                                                .noneMatch(student ->
+                                                                .anyMatch(student ->
                                                                         student.getName().equals(userInfo.getName())
                                                                 )
                                                         )
@@ -50,11 +53,12 @@ public class ScheduleComposer {
                                                                 () -> {
                                                                     System.out.println(
                                                                             "subject is optional but it was not found in specCourses list");
-                                                                    return false;
+                                                                    return true;
                                                                 }
                                                         )
-                        )
-        );
+
+                        ).collect(Collectors.toList()))
+        ).collect(Collectors.toList());
 
         return new UserTable(table);
     }

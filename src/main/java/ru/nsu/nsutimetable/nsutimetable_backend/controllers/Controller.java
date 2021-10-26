@@ -1,17 +1,15 @@
 package ru.nsu.nsutimetable.nsutimetable_backend.controllers;
 
-import lombok.SneakyThrows;
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.ScheduleComposer;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserInfo;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserTable;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.AddSubjectFrom;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.RemoveSubjectForm;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupService;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupServiceFromFacultyList;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.AddSubjectFrom;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.RemoveSubjectForm;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.SetGroupForm;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.UserTableService;
 
 import java.util.List;
@@ -38,17 +36,17 @@ public class Controller {
     }
 
     @GetMapping(path = "table/{groupName}")
-    public Group getGroup(@PathVariable String groupName) {
+    public Group getGroup(@PathVariable String groupName) throws TableException {
         return getFacultyList.findGroupByGroupNum(groupName);
     }
 
     @PostMapping(path = "table")
-    public UserTable createTableFromGroup(@RequestBody UserInfo userInfo) {
-        try {
+    public UserTable createTableFromGroup(@RequestBody UserInfo userInfo) throws TableException {
+//        try {
             userTableService.setUserTable(scheduleComposer.composeUserTable(userInfo));
-        } catch (TableException e) {
-            e.printStackTrace();
-        }
+//        } catch (TableException e) {
+//            e.printStackTrace();
+//        }
         return userTableService.getUserTable();
     }
 

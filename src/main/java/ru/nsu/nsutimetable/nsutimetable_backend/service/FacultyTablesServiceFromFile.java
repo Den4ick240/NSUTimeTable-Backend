@@ -1,17 +1,17 @@
 package ru.nsu.nsutimetable.nsutimetable_backend.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.SessionScope;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.FacultyTables;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 @Service
-@Scope("singleton")
+@SessionScope
 public class FacultyTablesServiceFromFile implements FacultyTablesService {
-    private static final String FILE_NAME = "/FIT_timetable.json";
+    private static final String FILE_NAME = "/FIT_table.json";
 
     private final FacultyTables facultyTables;
 

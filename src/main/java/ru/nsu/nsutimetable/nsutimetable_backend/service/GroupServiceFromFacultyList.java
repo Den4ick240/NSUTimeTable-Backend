@@ -1,6 +1,7 @@
 package ru.nsu.nsutimetable.nsutimetable_backend.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.SessionScope;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.GroupInfo;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.FacultyTables;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
@@ -13,6 +14,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 @Service
+@SessionScope
 public class GroupServiceFromFacultyList implements GroupService {
     final private FacultyTables facultyList;
 
@@ -21,7 +23,7 @@ public class GroupServiceFromFacultyList implements GroupService {
     }
 
     @Override
-    public Group findGroupByGroupNum(String groupNum) {
+    public Group findGroupByGroupNum(String groupNum) throws TableException {
 
         return Optional
                 .ofNullable(
@@ -32,7 +34,8 @@ public class GroupServiceFromFacultyList implements GroupService {
                                         .findFirst()
                                         .orElse(null))
                 )
-                .orElseThrow(() -> new RuntimeException("Requested group does not exist"));
+                .map(group -> new Group(group.getGroupNum(), new ArrayList<>(group.getTable())))
+                .orElseThrow(() -> new TableException("Requested group does not exist"));
     }
 
     @Override

@@ -10,7 +10,7 @@
               "num": 1,
               "groups": [
                 {
-                  "groupNum": 21201,
+                  "groupNum": "21201",
                   "table": [
                     {
                       "dayNum": 1,
@@ -259,20 +259,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21202,
+                  "groupNum": "21202",
                   "table": [
                     {
                       "dayNum": 1,
@@ -528,7 +524,7 @@
                           "fullName": "Программирование",
                           "odd": null,
                           "type": "лаб",
-                          "room": "т2266",
+                          "room": "т4218",
                           "teacher": "Величко А.",
                           "optional": false
                         }
@@ -536,14 +532,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21203,
+                  "groupNum": "21203",
                   "table": [
                     {
                       "dayNum": 1,
@@ -807,14 +801,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21204,
+                  "groupNum": "21204",
                   "table": [
                     {
                       "dayNum": 1,
@@ -1078,14 +1070,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21205,
+                  "groupNum": "21205",
                   "table": [
                     {
                       "dayNum": 1,
@@ -1116,7 +1106,7 @@
                           "fullName": "Программирование",
                           "odd": null,
                           "type": "пр",
-                          "room": "4115",
+                          "room": "2346",
                           "teacher": "Истомин М.А.",
                           "optional": false
                         },
@@ -1331,7 +1321,7 @@
                           "fullName": "Программирование",
                           "odd": null,
                           "type": "лаб",
-                          "room": "т4218",
+                          "room": "т2266",
                           "teacher": "Истомин М.А.",
                           "optional": false
                         },
@@ -1349,14 +1339,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21206,
+                  "groupNum": "21206",
                   "table": [
                     {
                       "dayNum": 1,
@@ -1620,14 +1608,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21207,
+                  "groupNum": "21207",
                   "table": [
                     {
                       "dayNum": 1,
@@ -1891,14 +1877,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21208,
+                  "groupNum": "21208",
                   "table": [
                     {
                       "dayNum": 1,
@@ -2162,14 +2146,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21209,
+                  "groupNum": "21209",
                   "table": [
                     {
                       "dayNum": 1,
@@ -2433,14 +2415,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21210,
+                  "groupNum": "21210",
                   "table": [
                     {
                       "dayNum": 1,
@@ -2704,14 +2684,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21211,
+                  "groupNum": "21211",
                   "table": [
                     {
                       "dayNum": 1,
@@ -2960,20 +2938,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21212,
+                  "groupNum": "21212",
                   "table": [
                     {
                       "dayNum": 1,
@@ -3237,14 +3211,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21213,
+                  "groupNum": "21213",
                   "table": [
                     {
                       "dayNum": 1,
@@ -3463,20 +3435,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21214,
+                  "groupNum": "21214",
                   "table": [
                     {
                       "dayNum": 1,
@@ -3695,20 +3663,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21215,
+                  "groupNum": "21215",
                   "table": [
                     {
                       "dayNum": 1,
@@ -3932,14 +3896,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21216,
+                  "groupNum": "21216",
                   "table": [
                     {
                       "dayNum": 1,
@@ -4163,9 +4125,7 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 }
@@ -4175,7 +4135,7 @@
               "num": 2,
               "groups": [
                 {
-                  "groupNum": 20201,
+                  "groupNum": "20201",
                   "table": [
                     {
                       "dayNum": 1,
@@ -4364,20 +4324,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20202,
+                  "groupNum": "20202",
                   "table": [
                     {
                       "dayNum": 1,
@@ -4496,9 +4452,7 @@
                     },
                     {
                       "dayNum": 4,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 5,
@@ -4572,14 +4526,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20203,
+                  "groupNum": "20203",
                   "table": [
                     {
                       "dayNum": 1,
@@ -4768,20 +4720,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20204,
+                  "groupNum": "20204",
                   "table": [
                     {
                       "dayNum": 1,
@@ -4985,14 +4933,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20205,
+                  "groupNum": "20205",
                   "table": [
                     {
                       "dayNum": 1,
@@ -5111,9 +5057,7 @@
                     },
                     {
                       "dayNum": 4,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 5,
@@ -5187,14 +5131,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20206,
+                  "groupNum": "20206",
                   "table": [
                     {
                       "dayNum": 1,
@@ -5398,14 +5340,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20207,
+                  "groupNum": "20207",
                   "table": [
                     {
                       "dayNum": 1,
@@ -5594,20 +5534,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20208,
+                  "groupNum": "20208",
                   "table": [
                     {
                       "dayNum": 1,
@@ -5796,20 +5732,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20209,
+                  "groupNum": "20209",
                   "table": [
                     {
                       "dayNum": 1,
@@ -6013,14 +5945,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20210,
+                  "groupNum": "20210",
                   "table": [
                     {
                       "dayNum": 1,
@@ -6209,20 +6139,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20211,
+                  "groupNum": "20211",
                   "table": [
                     {
                       "dayNum": 1,
@@ -6411,20 +6337,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20212,
+                  "groupNum": "20212",
                   "table": [
                     {
                       "dayNum": 1,
@@ -6613,20 +6535,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20213,
+                  "groupNum": "20213",
                   "table": [
                     {
                       "dayNum": 1,
@@ -6855,20 +6773,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20214,
+                  "groupNum": "20214",
                   "table": [
                     {
                       "dayNum": 1,
@@ -7097,20 +7011,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20215,
+                  "groupNum": "20215",
                   "table": [
                     {
                       "dayNum": 1,
@@ -7339,15 +7249,11 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 }
@@ -7357,7 +7263,7 @@
               "num": 3,
               "groups": [
                 {
-                  "groupNum": 19201,
+                  "groupNum": "19201",
                   "table": [
                     {
                       "dayNum": 1,
@@ -7671,14 +7577,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19202,
+                  "groupNum": "19202",
                   "table": [
                     {
                       "dayNum": 1,
@@ -7719,7 +7623,7 @@
                           "fullName": "Вычислительная математика",
                           "odd": null,
                           "type": "пр",
-                          "room": "2346",
+                          "room": "4115",
                           "teacher": "Остапенко В.В.",
                           "optional": false
                         },
@@ -7992,14 +7896,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19203,
+                  "groupNum": "19203",
                   "table": [
                     {
                       "dayNum": 1,
@@ -8313,14 +8215,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19204,
+                  "groupNum": "19204",
                   "table": [
                     {
                       "dayNum": 1,
@@ -8634,14 +8534,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19205,
+                  "groupNum": "19205",
                   "table": [
                     {
                       "dayNum": 1,
@@ -8955,14 +8853,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19206,
+                  "groupNum": "19206",
                   "table": [
                     {
                       "dayNum": 1,
@@ -9276,14 +9172,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19207,
+                  "groupNum": "19207",
                   "table": [
                     {
                       "dayNum": 1,
@@ -9597,14 +9491,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19208,
+                  "groupNum": "19208",
                   "table": [
                     {
                       "dayNum": 1,
@@ -9918,14 +9810,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19209,
+                  "groupNum": "19209",
                   "table": [
                     {
                       "dayNum": 1,
@@ -10239,14 +10129,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19210,
+                  "groupNum": "19210",
                   "table": [
                     {
                       "dayNum": 1,
@@ -10560,14 +10448,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19211,
+                  "groupNum": "19211",
                   "table": [
                     {
                       "dayNum": 1,
@@ -10881,14 +10767,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19212,
+                  "groupNum": "19212",
                   "table": [
                     {
                       "dayNum": 1,
@@ -11114,7 +10998,7 @@
                           "fullName": "Сети и телекоммуникации",
                           "odd": null,
                           "type": "лаб",
-                          "room": "т4213",
+                          "room": "т3213",
                           "teacher": "Ипполитов В.Д.",
                           "optional": false
                         }
@@ -11202,14 +11086,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19213,
+                  "groupNum": "19213",
                   "table": [
                     {
                       "dayNum": 1,
@@ -11448,20 +11330,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19214,
+                  "groupNum": "19214",
                   "table": [
                     {
                       "dayNum": 1,
@@ -11715,9 +11593,7 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 }
@@ -11727,7 +11603,7 @@
               "num": 4,
               "groups": [
                 {
-                  "groupNum": 18201,
+                  "groupNum": "18201",
                   "table": [
                     {
                       "dayNum": 1,
@@ -11944,26 +11820,6 @@
                       "subjects": [
                         {
                           "lessonNum": 1,
-                          "name": "С# и платф.NET",
-                          "fullName": "Введение в С# и платформу.NET",
-                          "odd": null,
-                          "type": "пр",
-                          "room": "т3218",
-                          "teacher": "Павлов А.В.",
-                          "optional": false
-                        },
-                        {
-                          "lessonNum": 1,
-                          "name": "ПАОЦИ",
-                          "fullName": "Прикладные алгоритмы обработки цифровых изображений",
-                          "odd": null,
-                          "type": "лек",
-                          "room": "1156",
-                          "teacher": "Кугаевских А.В.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 1,
                           "name": "Информационный поиск",
                           "fullName": "Информационный поиск",
                           "odd": null,
@@ -11980,6 +11836,26 @@
                           "type": "лек",
                           "room": "1130",
                           "teacher": "Рябко Б.Я.",
+                          "optional": true
+                        },
+                        {
+                          "lessonNum": 1,
+                          "name": "С# и платф.NET",
+                          "fullName": "Введение в С# и платформу.NET",
+                          "odd": null,
+                          "type": "пр",
+                          "room": "т3218",
+                          "teacher": "Павлов А.В.",
+                          "optional": false
+                        },
+                        {
+                          "lessonNum": 1,
+                          "name": "ПАОЦИ",
+                          "fullName": "Прикладные алгоритмы обработки цифровых изображений",
+                          "odd": null,
+                          "type": "лек",
+                          "room": "1156",
+                          "teacher": "Кугаевских А.В.",
                           "optional": true
                         },
                         {
@@ -12091,14 +11967,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 18202,
+                  "groupNum": "18202",
                   "table": [
                     {
                       "dayNum": 1,
@@ -12325,26 +12199,6 @@
                       "subjects": [
                         {
                           "lessonNum": 1,
-                          "name": "С# и платф.NET",
-                          "fullName": "Введение в С# и платформу.NET",
-                          "odd": null,
-                          "type": "пр",
-                          "room": "т3218",
-                          "teacher": "Павлов А.В.",
-                          "optional": false
-                        },
-                        {
-                          "lessonNum": 1,
-                          "name": "ПАОЦИ",
-                          "fullName": "Прикладные алгоритмы обработки цифровых изображений",
-                          "odd": null,
-                          "type": "лек",
-                          "room": "1156",
-                          "teacher": "Кугаевских А.В.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 1,
                           "name": "Информационный поиск",
                           "fullName": "Информационный поиск",
                           "odd": null,
@@ -12361,6 +12215,26 @@
                           "type": "лек",
                           "room": "1130",
                           "teacher": "Рябко Б.Я.",
+                          "optional": true
+                        },
+                        {
+                          "lessonNum": 1,
+                          "name": "С# и платф.NET",
+                          "fullName": "Введение в С# и платформу.NET",
+                          "odd": null,
+                          "type": "пр",
+                          "room": "т3218",
+                          "teacher": "Павлов А.В.",
+                          "optional": false
+                        },
+                        {
+                          "lessonNum": 1,
+                          "name": "ПАОЦИ",
+                          "fullName": "Прикладные алгоритмы обработки цифровых изображений",
+                          "odd": null,
+                          "type": "лек",
+                          "room": "1156",
+                          "teacher": "Кугаевских А.В.",
                           "optional": true
                         },
                         {
@@ -12462,14 +12336,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 18203,
+                  "groupNum": "18203",
                   "table": [
                     {
                       "dayNum": 1,
@@ -12706,26 +12578,6 @@
                       "subjects": [
                         {
                           "lessonNum": 1,
-                          "name": "С# и платф.NET",
-                          "fullName": "Введение в С# и платформу.NET",
-                          "odd": null,
-                          "type": "пр",
-                          "room": "т3218",
-                          "teacher": "Павлов А.В.",
-                          "optional": false
-                        },
-                        {
-                          "lessonNum": 1,
-                          "name": "ПАОЦИ",
-                          "fullName": "Прикладные алгоритмы обработки цифровых изображений",
-                          "odd": null,
-                          "type": "лек",
-                          "room": "1156",
-                          "teacher": "Кугаевских А.В.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 1,
                           "name": "Информационный поиск",
                           "fullName": "Информационный поиск",
                           "odd": null,
@@ -12742,6 +12594,26 @@
                           "type": "лек",
                           "room": "1130",
                           "teacher": "Рябко Б.Я.",
+                          "optional": true
+                        },
+                        {
+                          "lessonNum": 1,
+                          "name": "С# и платф.NET",
+                          "fullName": "Введение в С# и платформу.NET",
+                          "odd": null,
+                          "type": "пр",
+                          "room": "т3218",
+                          "teacher": "Павлов А.В.",
+                          "optional": false
+                        },
+                        {
+                          "lessonNum": 1,
+                          "name": "ПАОЦИ",
+                          "fullName": "Прикладные алгоритмы обработки цифровых изображений",
+                          "odd": null,
+                          "type": "лек",
+                          "room": "1156",
+                          "teacher": "Кугаевских А.В.",
                           "optional": true
                         },
                         {
@@ -12833,14 +12705,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 18204,
+                  "groupNum": "18204",
                   "table": [
                     {
                       "dayNum": 1,
@@ -13077,16 +12947,6 @@
                       "subjects": [
                         {
                           "lessonNum": 1,
-                          "name": "ПАОЦИ",
-                          "fullName": "Прикладные алгоритмы обработки цифровых изображений",
-                          "odd": null,
-                          "type": "лек",
-                          "room": "1156",
-                          "teacher": "Кугаевских А.В.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 1,
                           "name": "Информационный поиск",
                           "fullName": "Информационный поиск",
                           "odd": null,
@@ -13103,6 +12963,16 @@
                           "type": "лек",
                           "room": "1130",
                           "teacher": "Рябко Б.Я.",
+                          "optional": true
+                        },
+                        {
+                          "lessonNum": 1,
+                          "name": "ПАОЦИ",
+                          "fullName": "Прикладные алгоритмы обработки цифровых изображений",
+                          "odd": null,
+                          "type": "лек",
+                          "room": "1156",
+                          "teacher": "Кугаевских А.В.",
                           "optional": true
                         },
                         {
@@ -13137,16 +13007,6 @@
                         },
                         {
                           "lessonNum": 3,
-                          "name": "Информационный поиск",
-                          "fullName": "Информационный поиск",
-                          "odd": null,
-                          "type": "пр",
-                          "room": "3120",
-                          "teacher": "Барахнин В.Б.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 3,
                           "name": "С# и платф.NET",
                           "fullName": "Введение в С# и платформу.NET",
                           "odd": null,
@@ -13154,6 +13014,16 @@
                           "room": "2128",
                           "teacher": "Сидоров Г.А.",
                           "optional": false
+                        },
+                        {
+                          "lessonNum": 3,
+                          "name": "Информационный поиск",
+                          "fullName": "Информационный поиск",
+                          "odd": null,
+                          "type": "пр",
+                          "room": "3120",
+                          "teacher": "Барахнин В.Б.",
+                          "optional": true
                         },
                         {
                           "lessonNum": 4,
@@ -13204,14 +13074,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 18205,
+                  "groupNum": "18205",
                   "table": [
                     {
                       "dayNum": 1,
@@ -13438,16 +13306,6 @@
                       "subjects": [
                         {
                           "lessonNum": 1,
-                          "name": "ПАОЦИ",
-                          "fullName": "Прикладные алгоритмы обработки цифровых изображений",
-                          "odd": null,
-                          "type": "лек",
-                          "room": "1156",
-                          "teacher": "Кугаевских А.В.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 1,
                           "name": "Информационный поиск",
                           "fullName": "Информационный поиск",
                           "odd": null,
@@ -13464,6 +13322,16 @@
                           "type": "лек",
                           "room": "1130",
                           "teacher": "Рябко Б.Я.",
+                          "optional": true
+                        },
+                        {
+                          "lessonNum": 1,
+                          "name": "ПАОЦИ",
+                          "fullName": "Прикладные алгоритмы обработки цифровых изображений",
+                          "odd": null,
+                          "type": "лек",
+                          "room": "1156",
+                          "teacher": "Кугаевских А.В.",
                           "optional": true
                         },
                         {
@@ -13498,16 +13366,6 @@
                         },
                         {
                           "lessonNum": 3,
-                          "name": "Информационный поиск",
-                          "fullName": "Информационный поиск",
-                          "odd": null,
-                          "type": "пр",
-                          "room": "3120",
-                          "teacher": "Барахнин В.Б.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 3,
                           "name": "С# и платф.NET",
                           "fullName": "Введение в С# и платформу.NET",
                           "odd": null,
@@ -13515,6 +13373,16 @@
                           "room": "2128",
                           "teacher": "Сидоров Г.А.",
                           "optional": false
+                        },
+                        {
+                          "lessonNum": 3,
+                          "name": "Информационный поиск",
+                          "fullName": "Информационный поиск",
+                          "odd": null,
+                          "type": "пр",
+                          "room": "3120",
+                          "teacher": "Барахнин В.Б.",
+                          "optional": true
                         },
                         {
                           "lessonNum": 4,
@@ -13575,14 +13443,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 18206,
+                  "groupNum": "18206",
                   "table": [
                     {
                       "dayNum": 1,
@@ -13799,6 +13665,16 @@
                       "subjects": [
                         {
                           "lessonNum": 1,
+                          "name": "Информационный поиск",
+                          "fullName": "Информационный поиск",
+                          "odd": null,
+                          "type": "лек",
+                          "room": "2128",
+                          "teacher": "Барахнин В.Б.",
+                          "optional": true
+                        },
+                        {
+                          "lessonNum": 1,
                           "name": "КИТ",
                           "fullName": "Криптография для информационных технологий",
                           "odd": null,
@@ -13815,16 +13691,6 @@
                           "type": "лек",
                           "room": "1156",
                           "teacher": "Кугаевских А.В.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 1,
-                          "name": "Информационный поиск",
-                          "fullName": "Информационный поиск",
-                          "odd": null,
-                          "type": "лек",
-                          "room": "2128",
-                          "teacher": "Барахнин В.Б.",
                           "optional": true
                         },
                         {
@@ -13859,16 +13725,6 @@
                         },
                         {
                           "lessonNum": 3,
-                          "name": "Информационный поиск",
-                          "fullName": "Информационный поиск",
-                          "odd": null,
-                          "type": "пр",
-                          "room": "3120",
-                          "teacher": "Барахнин В.Б.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 3,
                           "name": "С# и платф.NET",
                           "fullName": "Введение в С# и платформу.NET",
                           "odd": null,
@@ -13876,6 +13732,16 @@
                           "room": "2128",
                           "teacher": "Сидоров Г.А.",
                           "optional": false
+                        },
+                        {
+                          "lessonNum": 3,
+                          "name": "Информационный поиск",
+                          "fullName": "Информационный поиск",
+                          "odd": null,
+                          "type": "пр",
+                          "room": "3120",
+                          "teacher": "Барахнин В.Б.",
+                          "optional": true
                         },
                         {
                           "lessonNum": 4,
@@ -13946,14 +13812,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 18207,
+                  "groupNum": "18207",
                   "table": [
                     {
                       "dayNum": 1,
@@ -14170,6 +14034,16 @@
                       "subjects": [
                         {
                           "lessonNum": 1,
+                          "name": "Информационный поиск",
+                          "fullName": "Информационный поиск",
+                          "odd": null,
+                          "type": "лек",
+                          "room": "2128",
+                          "teacher": "Барахнин В.Б.",
+                          "optional": true
+                        },
+                        {
+                          "lessonNum": 1,
                           "name": "КИТ",
                           "fullName": "Криптография для информационных технологий",
                           "odd": null,
@@ -14186,16 +14060,6 @@
                           "type": "лек",
                           "room": "1156",
                           "teacher": "Кугаевских А.В.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 1,
-                          "name": "Информационный поиск",
-                          "fullName": "Информационный поиск",
-                          "odd": null,
-                          "type": "лек",
-                          "room": "2128",
-                          "teacher": "Барахнин В.Б.",
                           "optional": true
                         },
                         {
@@ -14230,16 +14094,6 @@
                         },
                         {
                           "lessonNum": 3,
-                          "name": "Информационный поиск",
-                          "fullName": "Информационный поиск",
-                          "odd": null,
-                          "type": "пр",
-                          "room": "3120",
-                          "teacher": "Барахнин В.Б.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 3,
                           "name": "С# и платф.NET",
                           "fullName": "Введение в С# и платформу.NET",
                           "odd": null,
@@ -14247,6 +14101,16 @@
                           "room": "2128",
                           "teacher": "Сидоров Г.А.",
                           "optional": false
+                        },
+                        {
+                          "lessonNum": 3,
+                          "name": "Информационный поиск",
+                          "fullName": "Информационный поиск",
+                          "odd": null,
+                          "type": "пр",
+                          "room": "3120",
+                          "teacher": "Барахнин В.Б.",
+                          "optional": true
                         },
                         {
                           "lessonNum": 4,
@@ -14317,14 +14181,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 18208,
+                  "groupNum": "18208",
                   "table": [
                     {
                       "dayNum": 1,
@@ -14561,6 +14423,16 @@
                       "subjects": [
                         {
                           "lessonNum": 1,
+                          "name": "Информационный поиск",
+                          "fullName": "Информационный поиск",
+                          "odd": null,
+                          "type": "лек",
+                          "room": "2128",
+                          "teacher": "Барахнин В.Б.",
+                          "optional": true
+                        },
+                        {
+                          "lessonNum": 1,
                           "name": "КИТ",
                           "fullName": "Криптография для информационных технологий",
                           "odd": null,
@@ -14577,16 +14449,6 @@
                           "type": "лек",
                           "room": "1156",
                           "teacher": "Кугаевских А.В.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 1,
-                          "name": "Информационный поиск",
-                          "fullName": "Информационный поиск",
-                          "odd": null,
-                          "type": "лек",
-                          "room": "2128",
-                          "teacher": "Барахнин В.Б.",
                           "optional": true
                         },
                         {
@@ -14688,14 +14550,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 18209,
+                  "groupNum": "18209",
                   "table": [
                     {
                       "dayNum": 1,
@@ -14932,6 +14792,16 @@
                       "subjects": [
                         {
                           "lessonNum": 1,
+                          "name": "Информационный поиск",
+                          "fullName": "Информационный поиск",
+                          "odd": null,
+                          "type": "лек",
+                          "room": "2128",
+                          "teacher": "Барахнин В.Б.",
+                          "optional": true
+                        },
+                        {
+                          "lessonNum": 1,
                           "name": "КИТ",
                           "fullName": "Криптография для информационных технологий",
                           "odd": null,
@@ -14948,16 +14818,6 @@
                           "type": "лек",
                           "room": "1156",
                           "teacher": "Кугаевских А.В.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 1,
-                          "name": "Информационный поиск",
-                          "fullName": "Информационный поиск",
-                          "odd": null,
-                          "type": "лек",
-                          "room": "2128",
-                          "teacher": "Барахнин В.Б.",
                           "optional": true
                         },
                         {
@@ -15059,14 +14919,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 18210,
+                  "groupNum": "18210",
                   "table": [
                     {
                       "dayNum": 1,
@@ -15293,6 +15151,16 @@
                       "subjects": [
                         {
                           "lessonNum": 1,
+                          "name": "Информационный поиск",
+                          "fullName": "Информационный поиск",
+                          "odd": null,
+                          "type": "лек",
+                          "room": "2128",
+                          "teacher": "Барахнин В.Б.",
+                          "optional": true
+                        },
+                        {
+                          "lessonNum": 1,
                           "name": "КИТ",
                           "fullName": "Криптография для информационных технологий",
                           "odd": null,
@@ -15309,16 +15177,6 @@
                           "type": "лек",
                           "room": "1156",
                           "teacher": "Кугаевских А.В.",
-                          "optional": true
-                        },
-                        {
-                          "lessonNum": 1,
-                          "name": "Информационный поиск",
-                          "fullName": "Информационный поиск",
-                          "odd": null,
-                          "type": "лек",
-                          "room": "2128",
-                          "teacher": "Барахнин В.Б.",
                           "optional": true
                         },
                         {
@@ -15430,14 +15288,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 18213,
+                  "groupNum": "18213",
                   "table": [
                     {
                       "dayNum": 1,
@@ -15721,9 +15577,7 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 }
@@ -15738,7 +15592,7 @@
               "num": 1,
               "groups": [
                 {
-                  "groupNum": 21221,
+                  "groupNum": "21221",
                   "table": [
                     {
                       "dayNum": 1,
@@ -15972,14 +15826,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21222,
+                  "groupNum": "21222",
                   "table": [
                     {
                       "dayNum": 1,
@@ -16118,9 +15970,7 @@
                     },
                     {
                       "dayNum": 4,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 5,
@@ -16204,14 +16054,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21223,
+                  "groupNum": "21223",
                   "table": [
                     {
                       "dayNum": 1,
@@ -16430,20 +16278,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21224,
+                  "groupNum": "21224",
                   "table": [
                     {
                       "dayNum": 1,
@@ -16662,20 +16506,16 @@
                     },
                     {
                       "dayNum": 6,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21225,
+                  "groupNum": "21225",
                   "table": [
                     {
                       "dayNum": 1,
@@ -16929,9 +16769,7 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 }
@@ -16941,7 +16779,7 @@
               "num": 2,
               "groups": [
                 {
-                  "groupNum": 20221,
+                  "groupNum": "20221",
                   "table": [
                     {
                       "dayNum": 1,
@@ -17062,16 +16900,6 @@
                           "optional": false
                         },
                         {
-                          "lessonNum": 5,
-                          "name": "Интерф. прогр. сист.",
-                          "fullName": "Интерфейсы программных систем",
-                          "odd": "Четная",
-                          "type": "лек",
-                          "room": "2128",
-                          "teacher": "Держо М.А.",
-                          "optional": false
-                        },
-                        {
                           "lessonNum": 6,
                           "name": "Интерф. прогр. сист.",
                           "fullName": "Интерфейсы программных систем",
@@ -17099,6 +16927,16 @@
                           "type": "пр",
                           "room": "т4220",
                           "teacher": "Кугаевских А.В.",
+                          "optional": false
+                        },
+                        {
+                          "lessonNum": 7,
+                          "name": "Интерф. прогр. сист.",
+                          "fullName": "Интерфейсы программных систем",
+                          "odd": "Четная",
+                          "type": "лек",
+                          "room": "0204",
+                          "teacher": "Держо М.А.",
                           "optional": false
                         }
                       ]
@@ -17283,16 +17121,6 @@
                         },
                         {
                           "lessonNum": 2,
-                          "name": "Уч.проф.проект",
-                          "fullName": "Учебный профессиональный проект",
-                          "odd": null,
-                          "type": "пр",
-                          "room": "1156",
-                          "teacher": "Иванчева Н.А.",
-                          "optional": false
-                        },
-                        {
-                          "lessonNum": 2,
                           "name": "ЭиУПП",
                           "fullName": "Экономика и управление программными проектами",
                           "odd": null,
@@ -17300,19 +17128,27 @@
                           "room": "3153",
                           "teacher": "Пухначева Т.П.",
                           "optional": false
+                        },
+                        {
+                          "lessonNum": 2,
+                          "name": "Уч.проф.проект",
+                          "fullName": "Учебный профессиональный проект",
+                          "odd": null,
+                          "type": "пр",
+                          "room": "1156",
+                          "teacher": "Иванчева Н.А.",
+                          "optional": false
                         }
                       ]
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20222,
+                  "groupNum": "20222",
                   "table": [
                     {
                       "dayNum": 1,
@@ -17423,16 +17259,6 @@
                           "optional": false
                         },
                         {
-                          "lessonNum": 5,
-                          "name": "Интерф. прогр. сист.",
-                          "fullName": "Интерфейсы программных систем",
-                          "odd": "Четная",
-                          "type": "лек",
-                          "room": "2128",
-                          "teacher": "Держо М.А.",
-                          "optional": false
-                        },
-                        {
                           "lessonNum": 6,
                           "name": "Интерф. прогр. сист.",
                           "fullName": "Интерфейсы программных систем",
@@ -17460,6 +17286,16 @@
                           "type": "пр",
                           "room": "т4220",
                           "teacher": "Кугаевских А.В.",
+                          "optional": false
+                        },
+                        {
+                          "lessonNum": 7,
+                          "name": "Интерф. прогр. сист.",
+                          "fullName": "Интерфейсы программных систем",
+                          "odd": "Четная",
+                          "type": "лек",
+                          "room": "0204",
+                          "teacher": "Держо М.А.",
                           "optional": false
                         }
                       ]
@@ -17644,6 +17480,16 @@
                         },
                         {
                           "lessonNum": 2,
+                          "name": "ЭиУПП",
+                          "fullName": "Экономика и управление программными проектами",
+                          "odd": null,
+                          "type": "пр",
+                          "room": "3153",
+                          "teacher": "Пухначева Т.П.",
+                          "optional": false
+                        },
+                        {
+                          "lessonNum": 2,
                           "name": "ПУИТП",
                           "fullName": "Практика управления ИТ проектами",
                           "odd": null,
@@ -17661,29 +17507,17 @@
                           "room": "1156",
                           "teacher": "Иванчева Н.А.",
                           "optional": false
-                        },
-                        {
-                          "lessonNum": 2,
-                          "name": "ЭиУПП",
-                          "fullName": "Экономика и управление программными проектами",
-                          "odd": null,
-                          "type": "пр",
-                          "room": "3153",
-                          "teacher": "Пухначева Т.П.",
-                          "optional": false
                         }
                       ]
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20223,
+                  "groupNum": "20223",
                   "table": [
                     {
                       "dayNum": 1,
@@ -17764,16 +17598,6 @@
                           "optional": false
                         },
                         {
-                          "lessonNum": 5,
-                          "name": "Интерф. прогр. сист.",
-                          "fullName": "Интерфейсы программных систем",
-                          "odd": "Четная",
-                          "type": "лек",
-                          "room": "2128",
-                          "teacher": "Держо М.А.",
-                          "optional": false
-                        },
-                        {
                           "lessonNum": 6,
                           "name": "Интерф. прогр. сист.",
                           "fullName": "Интерфейсы программных систем",
@@ -17801,6 +17625,16 @@
                           "type": "пр",
                           "room": "т4220",
                           "teacher": "Кугаевских А.В.",
+                          "optional": false
+                        },
+                        {
+                          "lessonNum": 7,
+                          "name": "Интерф. прогр. сист.",
+                          "fullName": "Интерфейсы программных систем",
+                          "odd": "Четная",
+                          "type": "лек",
+                          "room": "0204",
+                          "teacher": "Держо М.А.",
                           "optional": false
                         }
                       ]
@@ -17985,6 +17819,16 @@
                         },
                         {
                           "lessonNum": 2,
+                          "name": "ЭиУПП",
+                          "fullName": "Экономика и управление программными проектами",
+                          "odd": null,
+                          "type": "пр",
+                          "room": "3153",
+                          "teacher": "Пухначева Т.П.",
+                          "optional": false
+                        },
+                        {
+                          "lessonNum": 2,
                           "name": "ПУИТП",
                           "fullName": "Практика управления ИТ проектами",
                           "odd": null,
@@ -18002,29 +17846,17 @@
                           "room": "1156",
                           "teacher": "Иванчева Н.А.",
                           "optional": false
-                        },
-                        {
-                          "lessonNum": 2,
-                          "name": "ЭиУПП",
-                          "fullName": "Экономика и управление программными проектами",
-                          "odd": null,
-                          "type": "пр",
-                          "room": "3153",
-                          "teacher": "Пухначева Т.П.",
-                          "optional": false
                         }
                       ]
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20225,
+                  "groupNum": "20225",
                   "table": [
                     {
                       "dayNum": 1,
@@ -18298,9 +18130,7 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 }
@@ -18315,7 +18145,7 @@
               "num": 1,
               "groups": [
                 {
-                  "groupNum": 21231,
+                  "groupNum": "21231",
                   "table": [
                     {
                       "dayNum": 1,
@@ -18589,14 +18419,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 21232,
+                  "groupNum": "21232",
                   "table": [
                     {
                       "dayNum": 1,
@@ -18870,9 +18698,7 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 }
@@ -18882,7 +18708,7 @@
               "num": 2,
               "groups": [
                 {
-                  "groupNum": 20231,
+                  "groupNum": "20231",
                   "table": [
                     {
                       "dayNum": 1,
@@ -19156,14 +18982,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 20232,
+                  "groupNum": "20232",
                   "table": [
                     {
                       "dayNum": 1,
@@ -19447,9 +19271,7 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 }
@@ -19459,7 +19281,7 @@
               "num": 3,
               "groups": [
                 {
-                  "groupNum": 19231,
+                  "groupNum": "19231",
                   "table": [
                     {
                       "dayNum": 1,
@@ -19773,14 +19595,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 19232,
+                  "groupNum": "19232",
                   "table": [
                     {
                       "dayNum": 1,
@@ -20084,9 +19904,7 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 }
@@ -20096,7 +19914,7 @@
               "num": 4,
               "groups": [
                 {
-                  "groupNum": 18231,
+                  "groupNum": "18231",
                   "table": [
                     {
                       "dayNum": 1,
@@ -20390,14 +20208,12 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 },
                 {
-                  "groupNum": 18232,
+                  "groupNum": "18232",
                   "table": [
                     {
                       "dayNum": 1,
@@ -20701,9 +20517,7 @@
                     },
                     {
                       "dayNum": 7,
-                      "subjects": [
-                        
-                      ]
+                      "subjects": []
                     }
                   ]
                 }

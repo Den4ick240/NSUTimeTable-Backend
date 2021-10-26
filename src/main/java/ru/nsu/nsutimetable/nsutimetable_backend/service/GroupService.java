@@ -7,7 +7,7 @@ import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 import java.util.List;
 
 public interface GroupService {
-    Group findGroupByGroupNum(String groupNum);
+    Group findGroupByGroupNum(String groupNum) throws TableException;
 
     List<String> getGroupNumList();
 

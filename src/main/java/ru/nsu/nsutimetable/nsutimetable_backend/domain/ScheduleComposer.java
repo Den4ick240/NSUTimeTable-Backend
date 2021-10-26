@@ -10,6 +10,7 @@ import ru.nsu.nsutimetable.nsutimetable_backend.service.SpecSubjectService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 
 @Service
@@ -30,6 +31,7 @@ public class ScheduleComposer {
                 groupService.getGroupInfoByGroupNum(userInfo.getGroupNum())
         );
 
+        AtomicBoolean anyUserNameMatch = new AtomicBoolean(false);
         table = table.stream().map(day ->
                 new Table(day.getDayNum(), day.getSubjects()
                         .stream().filter(
@@ -42,12 +44,16 @@ public class ScheduleComposer {
                                                                 specSubject.getFullName().equals(subject.getFullName())
                                                         )
                                                         .findFirst()
-                                                        .map(specSubjectHasStudent -> specSubjectHasStudent
-                                                                .getStudents()
-                                                                .stream()
-                                                                .anyMatch(student ->
-                                                                        student.getName().equals(userInfo.getName())
-                                                                )
+                                                        .map(specSubject -> {
+                                                                    var specSubjectHasStudent = specSubject
+                                                                            .getStudents()
+                                                                            .stream()
+                                                                            .anyMatch(student ->
+                                                                                    student.getName().equals(userInfo.getName())
+                                                                            );
+                                                                    if (specSubjectHasStudent) anyUserNameMatch.set(true);
+                                                                    return specSubjectHasStudent;
+                                                                }
                                                         )
                                                         .orElseGet(
                                                                 () -> {
@@ -59,7 +65,9 @@ public class ScheduleComposer {
 
                         ).collect(Collectors.toList()))
         ).collect(Collectors.toList());
-
+        if (!anyUserNameMatch.get()) {
+            throw new TableException("??? ?? ???????");
+        }
         return new UserTable(table);
     }
 }

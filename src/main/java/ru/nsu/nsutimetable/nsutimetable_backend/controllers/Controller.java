@@ -31,6 +31,11 @@ public class Controller {
         this.scheduleComposer = scheduleComposer;
     }
 
+    @PostMapping("logout")
+    public void logout() {
+        userTableService.setUserTable(null);
+    }
+
     @GetMapping(path = "table")
     public UserTable getGroup() {
         return userTableService.getUserTable();
@@ -46,6 +51,9 @@ public class Controller {
         userTableService.setUserTable(scheduleComposer.composeUserTable(userInfo));
         return userTableService.getUserTable();
     }
+
+//    @PutMapping(path = "table")
+//    public void setUserTable(@RequestBody )
 
     @PostMapping(path = "table/subject")
     public void addSubject(@RequestBody AddSubjectFrom addSubjectFrom) throws TableException {

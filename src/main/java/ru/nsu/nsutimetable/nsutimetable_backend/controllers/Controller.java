@@ -13,6 +13,7 @@ import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupService;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupServiceFromFacultyList;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.UserTableService;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -52,8 +53,10 @@ public class Controller {
         return userTableService.getUserTable();
     }
 
-//    @PutMapping(path = "table")
-//    public void setUserTable(@RequestBody )
+    @PutMapping(path = "table")
+    public void setUserTable(@Valid @RequestBody UserTable table) {
+        userTableService.setUserTable(table);
+    }
 
     @PostMapping(path = "table/subject")
     public void addSubject(@RequestBody AddSubjectFrom addSubjectFrom) throws TableException {

@@ -25,9 +25,6 @@ public class Subject {
     private String fullName;
     private Object odd;
     private String type;
-
-    @NotNull
-    @NotEmpty
     private String room;
     private String teacher;
     private Boolean optional;

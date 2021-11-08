@@ -58,7 +58,7 @@ public class Controller {
     }
 
     @PutMapping(path = "table/subject")
-    public void setTable(@RequestBody UpdateSubjectForm updateSubjectForm) throws TableException {
+    public void updateSubject(@RequestBody UpdateSubjectForm updateSubjectForm) throws TableException {
         userTableService.updateSubject(updateSubjectForm);
     }
 

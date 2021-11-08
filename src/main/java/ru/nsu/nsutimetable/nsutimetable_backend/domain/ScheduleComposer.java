@@ -66,7 +66,7 @@ public class ScheduleComposer {
                         ).collect(Collectors.toList()))
         ).collect(Collectors.toList());
         if (!anyUserNameMatch.get()) {
-            throw new TableException("??? ?? ???????");
+            throw new TableException("User not found");
         }
         return new UserTable(table);
     }

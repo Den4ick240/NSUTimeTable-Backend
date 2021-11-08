@@ -6,6 +6,7 @@ import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserInfo;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserTable;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.AddSubjectFrom;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.RemoveSubjectForm;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.UpdateSubjectForm;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupService;
@@ -42,30 +43,23 @@ public class Controller {
 
     @PostMapping(path = "table")
     public UserTable createTableFromGroup(@RequestBody UserInfo userInfo) throws TableException {
-//        try {
-            userTableService.setUserTable(scheduleComposer.composeUserTable(userInfo));
-//        } catch (TableException e) {
-//            e.printStackTrace();
-//        }
+        userTableService.setUserTable(scheduleComposer.composeUserTable(userInfo));
         return userTableService.getUserTable();
     }
 
-    @PutMapping(path = "table")
-    public void addSubject(@RequestBody AddSubjectFrom addSubjectFrom){
-        try {
-            userTableService.addSubject(addSubjectFrom);
-        } catch (TableException e) {
-            e.printStackTrace();
-        }
+    @PostMapping(path = "table/subject")
+    public void addSubject(@RequestBody AddSubjectFrom addSubjectFrom) throws TableException {
+        userTableService.addSubject(addSubjectFrom);
     }
 
-    @DeleteMapping(path = "table")
-    public void deleteSubject(@RequestBody RemoveSubjectForm removeSubjectForm) {
-        try {
-            userTableService.removeSubject(removeSubjectForm);
-        } catch (TableException e) {
-            e.printStackTrace();
-        }
+    @DeleteMapping(path = "table/subject")
+    public void deleteSubject(@RequestBody RemoveSubjectForm removeSubjectForm) throws TableException {
+        userTableService.removeSubject(removeSubjectForm);
+    }
+
+    @PutMapping(path = "table")
+    public void setTable(@RequestBody UpdateSubjectForm updateSubjectForm) throws TableException {
+        userTableService.updateSubject(updateSubjectForm);
     }
 
     @GetMapping(path = "group_num_list")

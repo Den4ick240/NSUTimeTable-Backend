@@ -2,9 +2,9 @@ package ru.nsu.nsutimetable.nsutimetable_backend.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.GroupInfo;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.FacultyTables;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.GroupInfo;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.FacultyTables;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.Group;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 
 import java.util.ArrayList;

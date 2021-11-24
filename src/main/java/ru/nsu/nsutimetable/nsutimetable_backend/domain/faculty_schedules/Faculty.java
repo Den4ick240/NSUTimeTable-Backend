@@ -1,5 +1,5 @@
 
-package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules;
+package ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Degree {
+public class Faculty {
     private String name;
-    private List<Course> courses = null;
+    private List<Degree> degrees = null;
 }

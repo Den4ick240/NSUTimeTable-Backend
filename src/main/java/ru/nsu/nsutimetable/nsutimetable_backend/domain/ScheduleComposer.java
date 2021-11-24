@@ -1,9 +1,7 @@
 package ru.nsu.nsutimetable.nsutimetable_backend.domain;
 
 import org.springframework.stereotype.Service;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserInfo;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserTable;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Table;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.Table;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupService;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.SpecSubjectService;
@@ -24,7 +22,7 @@ public class ScheduleComposer {
         this.specSubjectService = specSubjectsService;
     }
 
-    public UserTable composeUserTable(UserInfo userInfo) throws TableException {
+    public UserTable composeUserTable(StudentInfo userInfo) throws TableException {
         List<Table> table = new ArrayList<>(groupService.findGroupByGroupNum(userInfo.getGroupNum()).getTable());
 
         var specSubjects = specSubjectService.findAllForGroupInfo(

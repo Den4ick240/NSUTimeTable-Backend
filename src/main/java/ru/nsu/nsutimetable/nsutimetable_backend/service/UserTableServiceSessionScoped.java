@@ -2,11 +2,11 @@ package ru.nsu.nsutimetable.nsutimetable_backend.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserTable;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.AddSubjectFrom;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.RemoveSubjectForm;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.UpdateSubjectForm;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Table;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.UserTable;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms.AddSubjectFrom;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms.RemoveSubjectForm;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms.UpdateSubjectForm;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.Table;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 
 @Service

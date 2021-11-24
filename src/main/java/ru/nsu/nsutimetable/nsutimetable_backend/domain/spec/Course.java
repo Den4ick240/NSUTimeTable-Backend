@@ -1,5 +1,5 @@
 
-package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.spec;
+package ru.nsu.nsutimetable.nsutimetable_backend.domain.spec;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

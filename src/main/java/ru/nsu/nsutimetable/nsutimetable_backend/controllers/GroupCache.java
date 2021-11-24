@@ -1,9 +1,9 @@
 package ru.nsu.nsutimetable.nsutimetable_backend.controllers;
 
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.RemoveSubjectForm;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Subject;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Table;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.Group;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms.RemoveSubjectForm;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.Subject;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.Table;
 
 public class GroupCache {
     private Group group = null;

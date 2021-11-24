@@ -2,12 +2,12 @@ package ru.nsu.nsutimetable.nsutimetable_backend.controllers;
 
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.ScheduleComposer;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserInfo;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.UserTable;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.AddSubjectFrom;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.RemoveSubjectForm;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms.UpdateSubjectForm;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Group;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.StudentInfo;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.UserTable;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms.AddSubjectFrom;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms.RemoveSubjectForm;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms.UpdateSubjectForm;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.Group;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupService;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.GroupServiceFromFacultyList;
@@ -48,7 +48,7 @@ public class Controller {
     }
 
     @PostMapping(path = "table")
-    public UserTable createTableFromGroup(@RequestBody UserInfo userInfo) throws TableException {
+    public UserTable createTableFromGroup(@RequestBody StudentInfo userInfo) throws TableException {
         userTableService.setUserTable(scheduleComposer.composeUserTable(userInfo));
         return userTableService.getUserTable();
     }

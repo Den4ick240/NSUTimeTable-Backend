@@ -1,8 +1,8 @@
 package ru.nsu.nsutimetable.nsutimetable_backend.service;
 
 import org.springframework.stereotype.Service;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.GroupInfo;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.spec.Subject;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.GroupInfo;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.spec.Subject;
 
 import java.util.List;
 

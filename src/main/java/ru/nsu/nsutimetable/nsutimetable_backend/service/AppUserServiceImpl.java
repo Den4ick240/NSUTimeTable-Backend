@@ -1,0 +1,46 @@
+package ru.nsu.nsutimetable.nsutimetable_backend.service;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.users.AppUser;
+import ru.nsu.nsutimetable.nsutimetable_backend.repository.AppUserRepository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+@RequiredArgsConstructor
+@Transactional
+@Slf4j
+public class AppUserServiceImpl implements AppUserService, UserDetailsService {
+    private final AppUserRepository userRepository;
+
+    @Override
+    public AppUser saveUser(AppUser appUser) {
+        log.info("Saving new user {} to db", appUser.getUsername());
+        return userRepository.save(appUser);
+    }
+
+    @Override
+    public AppUser getUser(String username) throws UsernameNotFoundException {
+        log.info("Fetching user {}", username);
+        return userRepository.findById(username).orElseThrow(()->new UsernameNotFoundException("No user with such username"));
+    }
+
+    @Override
+    public List<AppUser> getUsers() {
+        log.info("Fetching all users");
+        return userRepository.findAll();
+    }
+
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        var user = getUser(username);
+        return new User(user.getUsername(), user.getPassword(), new ArrayList<>());
+    }
+}

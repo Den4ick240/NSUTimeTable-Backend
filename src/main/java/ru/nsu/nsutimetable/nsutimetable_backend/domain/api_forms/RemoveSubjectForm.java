@@ -1,9 +1,9 @@
-package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.api_forms;
+package ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Subject;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.Subject;
 
 import java.util.Objects;
 

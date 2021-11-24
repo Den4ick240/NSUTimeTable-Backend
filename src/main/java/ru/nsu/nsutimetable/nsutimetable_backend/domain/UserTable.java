@@ -1,9 +1,9 @@
-package ru.nsu.nsutimetable.nsutimetable_backend.domain.entities;
+package ru.nsu.nsutimetable.nsutimetable_backend.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.entities.faculty_schedules.Table;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.Table;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

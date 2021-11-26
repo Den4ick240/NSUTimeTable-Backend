@@ -19,14 +19,14 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "api")
 @CrossOrigin(origins = "http://localhost:3000")
-public class Controller {
+public class TimeTableController {
     private final GroupService getFacultyList;
     private final UserTableService userTableService;
     private final ScheduleComposer scheduleComposer;
 
-    public Controller(GroupServiceFromFacultyList getFacultyList,
-                      UserTableService userTableService,
-                      ScheduleComposer scheduleComposer) {
+    public TimeTableController(GroupServiceFromFacultyList getFacultyList,
+                               UserTableService userTableService,
+                               ScheduleComposer scheduleComposer) {
         this.getFacultyList = getFacultyList;
         this.userTableService = userTableService;
         this.scheduleComposer = scheduleComposer;

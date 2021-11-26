@@ -7,7 +7,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
-//@EnableMongoRepositories(basePackageClasses = AppUserRepository.class)
 public class NsuTimeTableBackendApplication {
 
     public static void main(String[] args) {

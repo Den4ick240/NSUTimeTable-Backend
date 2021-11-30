@@ -16,7 +16,7 @@ public class UserStudentInfoServiceImpl implements UserStudentInfoService {
         return repository
                 .findById(username)
                 .map(UserStudentInfo::getStudentInfo)
-                .get();
+                .orElse(new StudentInfo("", ""));
     }
 
     @Override

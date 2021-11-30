@@ -8,6 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.StudentInfo;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms.ForgotPasswordForm;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms.RegisterForm;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.users.AppUser;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
@@ -16,6 +17,9 @@ import ru.nsu.nsutimetable.nsutimetable_backend.service.AppUserService;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.UserStudentInfoService;
 
 import javax.validation.Valid;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 
 @Controller
@@ -57,5 +61,15 @@ public class UserController {
         } else {
             return principal.toString();
         }
+    }
+
+    @PostMapping("user/password")
+    private ResponseEntity forgotPassword(@RequestBody @Valid ForgotPasswordForm form) throws IOException {
+        FileWriter fw = new FileWriter("forgottenPasswords.txt", true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(getUsername());
+        bw.newLine();
+        bw.close();
+        return ResponseEntity.ok().build();
     }
 }

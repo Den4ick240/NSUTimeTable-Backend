@@ -2,17 +2,18 @@ package ru.nsu.nsutimetable.nsutimetable_backend.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import ru.nsu.nsutimetable.nsutimetable_backend.domain.StudentInfo;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms.RegisterForm;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.users.AppUser;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.UsernameAlreadyExistsException;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.AppUserService;
+import ru.nsu.nsutimetable.nsutimetable_backend.service.UserStudentInfoService;
 
 import javax.validation.Valid;
 
@@ -24,6 +25,7 @@ import javax.validation.Valid;
 public class UserController {
     private final AppUserService userService;
     private final PasswordEncoder passwordEncoder;
+    private final UserStudentInfoService userStudentInfoService;
 
     @PostMapping("user/save")
     public ResponseEntity<String> saveUser(@Valid @RequestBody RegisterForm registerForm) throws TableException {
@@ -35,5 +37,25 @@ public class UserController {
             return ResponseEntity.status(409).build();
         }
         return ResponseEntity.ok("User created");
+    }
+
+    @PostMapping("student_info")
+    public ResponseEntity saveStudentInfo(@RequestBody StudentInfo studentInfo)  {
+        userStudentInfoService.setStudentInfo(getUsername(), studentInfo);
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("student_info")
+    public StudentInfo getStudentInfo() {
+        return userStudentInfoService.getStudentInfo(getUsername());
+    }
+
+    private String getUsername() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if (principal instanceof UserDetails) {
+            return ((UserDetails)principal).getUsername();
+        } else {
+            return principal.toString();
+        }
     }
 }

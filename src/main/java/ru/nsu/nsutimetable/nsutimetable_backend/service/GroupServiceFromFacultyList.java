@@ -1,9 +1,9 @@
 package ru.nsu.nsutimetable.nsutimetable_backend.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.GroupInfo;
-import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.FacultyTables;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.faculty_schedules.Group;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 
@@ -15,12 +15,9 @@ import java.util.function.Function;
 
 @Service
 @SessionScope
+@RequiredArgsConstructor
 public class GroupServiceFromFacultyList implements GroupService {
-    final private FacultyTables facultyList;
-
-    public GroupServiceFromFacultyList(FacultyTablesService facultySchedulesService) {
-        this.facultyList = facultySchedulesService.getFacultyTables();
-    }
+    private final FacultyTablesService facultyTablesService;
 
     @Override
     public Group findGroupByGroupNum(String groupNum) throws TableException {
@@ -49,7 +46,7 @@ public class GroupServiceFromFacultyList implements GroupService {
 
     @Override
     public GroupInfo getGroupInfoByGroupNum(String groupNum) throws TableException {
-        for (var faculty : facultyList.getFaculties())
+        for (var faculty : facultyTablesService.getFacultyTables().getFaculties())
             for (var degree : faculty.getDegrees())
                 for (var course : degree.getCourses())
                     if (course.getGroups().stream().anyMatch(group -> group.getGroupNum().equals(groupNum)))
@@ -67,7 +64,7 @@ public class GroupServiceFromFacultyList implements GroupService {
     private <T> T foreachGroupListWithReturn(Function<List<Group>, T> function) {
 
         for (var faculty :
-                facultyList.getFaculties())
+                facultyTablesService.getFacultyTables().getFaculties())
             for (var degrees :
                     faculty.getDegrees())
                 for (var course :

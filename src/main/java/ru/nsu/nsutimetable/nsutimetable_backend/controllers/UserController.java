@@ -2,6 +2,7 @@ package ru.nsu.nsutimetable.nsutimetable_backend.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -44,7 +45,7 @@ public class UserController {
     }
 
     @PostMapping("student_info")
-    public ResponseEntity saveStudentInfo(@RequestBody StudentInfo studentInfo)  {
+    public ResponseEntity saveStudentInfo(@RequestBody StudentInfo studentInfo) {
         userStudentInfoService.setStudentInfo(getUsername(), studentInfo);
         return ResponseEntity.ok().build();
     }
@@ -57,7 +58,7 @@ public class UserController {
     private String getUsername() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if (principal instanceof UserDetails) {
-            return ((UserDetails)principal).getUsername();
+            return ((UserDetails) principal).getUsername();
         } else {
             return principal.toString();
         }
@@ -71,5 +72,14 @@ public class UserController {
         bw.newLine();
         bw.close();
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("is_logged_in")
+    private ResponseEntity<Boolean> isLoggedIn() {
+        var auth = SecurityContextHolder.getContext().getAuthentication() != null &&
+                SecurityContextHolder.getContext().getAuthentication().isAuthenticated() &&
+                !(SecurityContextHolder.getContext().getAuthentication()
+                        instanceof AnonymousAuthenticationToken);
+        return ResponseEntity.ok(auth);
     }
 }

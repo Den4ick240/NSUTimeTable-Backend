@@ -15,6 +15,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserTable {
+
+    public UserTable(List<Table> table) {
+        this.table = table;
+    }
+
+    private StudentInfo studentInfo;
+
     @TableList
     private List<@Valid Table> table = null;
 

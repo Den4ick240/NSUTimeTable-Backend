@@ -1,5 +1,6 @@
 package ru.nsu.nsutimetable.nsutimetable_backend.controllers;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.ScheduleComposer;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.StudentInfo;
@@ -48,9 +49,17 @@ public class TimeTableController {
     }
 
     @PostMapping(path = "table")
-    public UserTable createTableFromGroup(@RequestBody StudentInfo userInfo) throws TableException {
-        userTableService.setUserTable(scheduleComposer.composeUserTable(userInfo));
-        return userTableService.getUserTable();
+    public ResponseEntity<UserTable> createTableFromGroup(@RequestBody StudentInfo userInfo) {
+        try {
+            userTableService.setUserTable(
+                    scheduleComposer.composeUserTable(userInfo)
+            );
+        } catch (TableException e) {
+            return ResponseEntity.badRequest().build();
+        }
+        return ResponseEntity.ok(
+                userTableService.getUserTable()
+        );
     }
 
     @PutMapping(path = "table")

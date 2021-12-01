@@ -12,25 +12,18 @@ import java.io.InputStream;
 @SessionScope
 public class FacultyTablesServiceFromFile implements FacultyTablesService {
     private static final String FILE_NAME = "/FIT_table.json";
-
-    private final FacultyTables facultyTables;
-
-    public FacultyTablesServiceFromFile() {
-        FacultyTables facultyList1;
+    @Override
+    public FacultyTables getFacultyTables() {
+        FacultyTables facultyList;
 
         try {
             ObjectMapper mapper = new ObjectMapper();
             InputStream is = GroupServiceFromFacultyList.class.getResourceAsStream(FILE_NAME);
-            facultyList1 = mapper.readValue(is, FacultyTables.class);
+            facultyList = mapper.readValue(is, FacultyTables.class);
         } catch (IOException e) {
             e.printStackTrace();
-            facultyList1 = null;
+            facultyList = null;
         }
-        facultyTables = facultyList1;
-    }
-
-    @Override
-    public FacultyTables getFacultyTables() {
-        return facultyTables;
+        return facultyList;
     }
 }

@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 @Configuration
 @EnableWebSecurity
@@ -24,23 +25,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http
+                .csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and().cors().and()
+                .authorizeRequests()
                 .antMatchers("/api/student_info").authenticated()
                 .antMatchers(HttpMethod.POST, "/api/base64/*").authenticated()
                 .anyRequest().permitAll()
         ;
-        http.formLogin();
+        http
+                .formLogin()
+                .successHandler((request, response, authentication) -> {
+                })
+                .failureHandler((request, response, exception) ->
+                        response.sendError(401, exception.getLocalizedMessage()))
+                .permitAll();
         http.httpBasic();
-        http.csrf().disable();
     }
-
-//    @Bean
-//    CorsConfigurationSource corsConfigurationSource() {
-//        CorsConfiguration configuration = new CorsConfiguration();
-//        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
-//        configuration.setAllowedMethods(Arrays.asList("GET","POST"));
-//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//        source.registerCorsConfiguration("/**", configuration);
-//        return source;
-//    }
 }

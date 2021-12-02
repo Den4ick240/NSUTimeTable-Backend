@@ -6,7 +6,6 @@ import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.StudentInfo;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.api_forms.ForgotPasswordForm;
@@ -23,7 +22,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 
-@Controller
+@RestController
 @RequestMapping("/api/")
 @CrossOrigin(origins = "http://localhost:3000")
 @RequiredArgsConstructor
@@ -55,7 +54,8 @@ public class UserController {
         return userStudentInfoService.getStudentInfo(getUsername());
     }
 
-    private String getUsername() {
+    @GetMapping("username")
+    public String getUsername() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if (principal instanceof UserDetails) {
             return ((UserDetails) principal).getUsername();

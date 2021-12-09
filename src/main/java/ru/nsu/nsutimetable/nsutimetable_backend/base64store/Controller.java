@@ -8,7 +8,7 @@ import ru.nsu.nsutimetable.nsutimetable_backend.service.UsernameProvider;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "api/base64")
+@RequestMapping()
 @CrossOrigin(origins = "http://localhost:3000")
 @RequiredArgsConstructor
 public class Controller {

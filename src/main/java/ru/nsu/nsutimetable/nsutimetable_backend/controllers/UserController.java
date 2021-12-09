@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.StudentInfo;
@@ -68,9 +69,15 @@ public class UserController {
 
     @PostMapping("user/password")
     private ResponseEntity forgotPassword(@RequestBody @Valid ForgotPasswordForm form) throws IOException {
+        try {
+            userService.getUser(form.getEmail());
+        } catch (UsernameNotFoundException e) {
+            return ResponseEntity.status(404).build();
+        }
+
         FileWriter fw = new FileWriter("forgottenPasswords.txt", true);
         BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(getUsername());
+        bw.write(form.getEmail());
         bw.newLine();
         bw.close();
         return ResponseEntity.ok().build();

@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.nsutimetable.nsutimetable_backend.domain.StudentInfo;
@@ -15,6 +14,7 @@ import ru.nsu.nsutimetable.nsutimetable_backend.exception.TableException;
 import ru.nsu.nsutimetable.nsutimetable_backend.exception.UsernameAlreadyExistsException;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.AppUserService;
 import ru.nsu.nsutimetable.nsutimetable_backend.service.UserStudentInfoService;
+import ru.nsu.nsutimetable.nsutimetable_backend.service.UsernameProvider;
 
 import javax.validation.Valid;
 import java.io.BufferedWriter;
@@ -30,6 +30,7 @@ public class UserController {
     private final AppUserService userService;
     private final PasswordEncoder passwordEncoder;
     private final UserStudentInfoService userStudentInfoService;
+    private final UsernameProvider usernameProvider;
 
     @PostMapping("user/save")
     public ResponseEntity<String> saveUser(@Valid @RequestBody RegisterForm registerForm) throws TableException {
@@ -56,12 +57,13 @@ public class UserController {
 
     @GetMapping("username")
     public String getUsername() {
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        if (principal instanceof UserDetails) {
-            return ((UserDetails) principal).getUsername();
-        } else {
-            return principal.toString();
-        }
+        return usernameProvider.getUsername();
+//        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        if (principal instanceof UserDetails) {
+//            return ((UserDetails) principal).getUsername();
+//        } else {
+//            return principal.toString();
+//        }
     }
 
     @PostMapping("user/password")

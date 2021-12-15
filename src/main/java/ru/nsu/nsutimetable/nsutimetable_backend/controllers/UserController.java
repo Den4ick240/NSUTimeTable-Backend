@@ -25,7 +25,6 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/api/")
-@CrossOrigin(origins = "http://localhost:3000")
 @RequiredArgsConstructor
 public class UserController {
     private final AppUserService userService;
@@ -59,12 +58,6 @@ public class UserController {
     @GetMapping("username")
     public String getUsername() {
         return usernameProvider.getUsername();
-//        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//        if (principal instanceof UserDetails) {
-//            return ((UserDetails) principal).getUsername();
-//        } else {
-//            return principal.toString();
-//        }
     }
 
     @PostMapping("user/password")

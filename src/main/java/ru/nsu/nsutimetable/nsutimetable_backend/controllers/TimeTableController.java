@@ -19,6 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api")
+@CrossOrigin(origins = "${corshosts}")
 public class TimeTableController {
     private final GroupService getFacultyList;
     private final UserTableService userTableService;

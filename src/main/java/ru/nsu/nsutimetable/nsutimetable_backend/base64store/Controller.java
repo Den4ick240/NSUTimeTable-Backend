@@ -8,6 +8,7 @@ import ru.nsu.nsutimetable.nsutimetable_backend.service.UsernameProvider;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "${corshosts}")
 @RequestMapping()
 @RequiredArgsConstructor
 public class Controller {

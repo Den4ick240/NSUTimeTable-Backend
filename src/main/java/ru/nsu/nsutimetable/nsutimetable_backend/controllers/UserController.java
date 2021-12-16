@@ -26,6 +26,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/api/")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "${corshosts}")
 public class UserController {
     private final AppUserService userService;
     private final PasswordEncoder passwordEncoder;
